@@ -1,0 +1,2481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sril Connect — Web Development Agency by Anil Jakkula. Websites, web apps & digital marketing for businesses. 9 HP LIFE Certified. 270+ Projects. Nirmal, Telangana.">
+<meta name="keywords" content="Sril Connect, Anil Jakkula, Web Development Agency, Web Developer India, React, Firebase, Full Stack, Nirmal, Telangana, Digital Agency">
+<meta name="author" content="Sril Connect · Anil Jakkula">
+<title>Sril Connect — Web Development Agency · Anil Jakkula</title>
+<!-- Favicon (replace with your real logo later) -->
+<link rel="icon" href="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=64&h=64&fit=crop&q=90">
+<link rel="apple-touch-icon" sizes="180x180" href="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=180&h=180&fit=crop&q=90">
+<meta name="theme-color" content="#C9A96E">
+<link rel="manifest" href="manifest.json">
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:site_name"   content="Sril Connect">
+<meta property="og:title"       content="Sril Connect — Web Development Agency · Anil Jakkula">
+<meta property="og:description" content="Websites, web apps & digital marketing for businesses. 9 HP LIFE Certified. 270+ Projects. Based in Nirmal, Telangana.">
+<meta property="og:image"       content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=630&fit=crop&q=80">
+<meta property="og:url"         content="https://YOUR_DOMAIN/">
+<!-- Twitter / X card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:title"       content="Sril Connect — Web Development Agency">
+<meta name="twitter:description" content="Websites, web apps & digital marketing for businesses. 9 HP LIFE Certified. 270+ Projects.">
+<meta name="twitter:image"       content="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=630&fit=crop&q=80">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+/* ── TOKENS ─────────────────────────────────────────── */
+:root{
+  --ink:      #0C0F1A;
+  --ink2:     #141828;
+  --ink3:     #1C2235;
+  --surface:  rgba(255,255,255,0.035);
+  --border:   rgba(255,255,255,0.07);
+  --border2:  rgba(255,255,255,0.12);
+  --snow:     #F2F4F8;
+  --muted:    #7A8499;
+  --muted2:   #A0AABF;
+  --gold:     #C9A96E;
+  --gold-dim: rgba(201,169,110,0.18);
+  --teal:     #3ECFB2;
+  --teal-dim: rgba(62,207,178,0.15);
+  --rose:     #E8736A;
+  --rose-dim: rgba(232,115,106,0.15);
+  --glow-g:   rgba(201,169,110,0.25);
+  --glow-t:   rgba(62,207,178,0.22);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{background:var(--ink);color:var(--snow);font-family:'Outfit',sans-serif;overflow-x:hidden;}
+::selection{background:var(--gold);color:#000;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-track{background:var(--ink);}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+
+/* ── PROGRESS ───────────────────────────────────────── */
+#prog{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--teal));z-index:10000;width:0%;}
+
+/* ── PARTICLES ──────────────────────────────────────── */
+#particles-js{position:fixed;inset:0;z-index:0;pointer-events:none;}
+
+/* ── PRELOADER ──────────────────────────────────────── */
+#preloader{position:fixed;inset:0;z-index:100000;background:radial-gradient(circle at center,var(--ink3) 0%,var(--ink) 68%);display:flex;align-items:center;justify-content:center;overflow:hidden;clip-path:circle(150% at center);transition:clip-path 1.15s cubic-bezier(.85,0,.15,1);}
+#preloader.hide{clip-path:circle(0% at center);pointer-events:none;}
+.loader-content-wrap{position:relative;z-index:2;display:grid;grid-template-rows:auto auto auto auto;align-items:center;justify-items:center;text-align:center;gap:1rem;}
+.loader-mark{width:190px;height:190px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center;animation:loaderFloat 1.8s ease-in-out infinite alternate;}
+.loader-mark::before{content:'';position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(#C9A96E 0deg,#3ECFB2 180deg,#C9A96E 360deg);z-index:0;animation:spinRing 3s linear infinite;}
+.loader-mark::after{content:'';position:absolute;inset:0;border-radius:50%;box-shadow:0 0 40px rgba(201,169,110,.35);z-index:3;pointer-events:none;}
+.loader-photo{width:calc(100% - 6px);height:calc(100% - 6px);border-radius:50%;overflow:hidden;background:var(--ink3);position:relative;z-index:1;}
+.loader-photo img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;}
+@keyframes spinRing{to{transform:rotate(360deg);}}
+.loader-logo{font-family:'Cormorant Garamond',serif;font-size:clamp(2.1rem,5vw,3.7rem);font-weight:600;color:var(--gold);letter-spacing:.05em;animation:fadeUp .8s ease forwards;}
+.loader-tagline{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(242,244,248,.48);animation:fadeUp .8s ease .18s forwards;}
+.loader-progress-container{width:240px;display:flex;flex-direction:column;align-items:center;gap:.8rem;}
+.loader-line-track{width:100%;height:3px;background:rgba(255,255,255,.06);border-radius:5px;overflow:hidden;position:relative;border:1px solid rgba(201,169,110,.12);}
+.loader-line-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--teal));box-shadow:0 0 12px rgba(201,169,110,.35);border-radius:5px;transition:width .1s ease-out;}
+.loader-percentage{font-size:.78rem;letter-spacing:.16em;color:var(--teal);font-weight:600;text-shadow:0 0 8px rgba(62,207,178,.25);}
+
+/* ── MOUSE GLOW ─────────────────────────────────────── */
+#mglow{position:fixed;width:560px;height:560px;pointer-events:none;z-index:1;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,0.055) 0%,transparent 70%);transform:translate(-50%,-50%);transition:all .4s ease;}
+
+/* ── NAV ────────────────────────────────────────────── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.3rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:all .4s;}
+nav.scrolled{background:rgba(12,15,26,0.88);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:1rem 3rem;}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:600;color:var(--snow);text-decoration:none;letter-spacing:.03em;cursor:pointer;}
+.nav-logo em{color:var(--gold);font-style:normal;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:color .3s;position:relative;cursor:pointer;}
+.nav-links a::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.nav-links a:hover,.nav-links a.active{color:var(--snow);}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%;}
+.nav-cta{background:transparent!important;color:var(--gold)!important;border:1px solid var(--gold)!important;padding:.5rem 1.4rem;border-radius:3px;font-size:.78rem!important;letter-spacing:.1em!important;transition:all .3s!important;}
+.nav-cta:hover{background:var(--gold)!important;color:var(--ink)!important;}
+.nav-cta::after{display:none!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;position:relative;z-index:1002;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--snow);border-radius:1px;transition:all .3s;}
+.hamburger.open{display:none;}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(12,15,26,0.97);backdrop-filter:blur(30px);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;}
+.mob-menu.open{display:flex;}
+.mob-menu a{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:500;color:var(--snow);text-decoration:none;transition:color .3s;letter-spacing:.04em;cursor:pointer;}
+.mob-menu a:hover{color:var(--gold);}
+.close-mob{position:absolute;top:1rem;right:1rem;width:44px;height:44px;background:rgba(255,255,255,0.06);border:1px solid rgba(201,169,110,0.35);border-radius:999px;color:var(--snow);font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:1005;box-shadow:0 10px 30px rgba(0,0,0,0.22);}
+.close-mob:hover{color:var(--gold);border-color:rgba(201,169,110,0.55);background:rgba(201,169,110,0.1);}
+body.mob-open{overflow:hidden;}
+body.mob-open nav{pointer-events:none;}
+
+/* ── PAGE ROUTING ───────────────────────────────────── */
+.page{display:none;transition:opacity .3s ease,transform .3s ease;}
+
+/* ── HERO ───────────────────────────────────────────── */
+#home{min-height:100vh;display:flex;align-items:center;position:relative;padding:0 3%;overflow:hidden;}
+.hero-wrap{display:grid;grid-template-columns:1fr 420px;gap:5rem;align-items:center;max-width:1200px;margin:0 auto;width:100%;position:relative;z-index:2;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';flex:1;height:1px;background:var(--gold);opacity:.4;width:30px;}
+.hero-name{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,4vw,3.8rem);font-weight:500;line-height:1.12;margin-bottom:.6rem;letter-spacing:.01em;color:var(--snow);}
+.hero-name em{font-style:italic;color:var(--gold);}
+.hero-role{font-size:clamp(.85rem,1.2vw,1rem);font-weight:400;color:var(--muted2);letter-spacing:.06em;margin-bottom:1.6rem;text-transform:uppercase;}
+.typed-wrap{display:inline-flex;align-items:center;gap:.4rem;color:var(--teal);}
+.typed-cur{animation:blink .7s step-end infinite;color:var(--gold);}
+.hero-desc{color:var(--muted);font-size:.95rem;line-height:1.9;max-width:460px;margin-bottom:2.5rem;font-weight:300;}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem;}
+.btn-primary{display:inline-flex;align-items:center;gap:.55rem;background:var(--gold);color:var(--ink);padding:.75rem 1.9rem;border-radius:3px;font-weight:600;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:all .3s;box-shadow:0 4px 24px var(--glow-g);cursor:pointer;}
+.btn-primary:hover{background:var(--teal);box-shadow:0 4px 28px var(--glow-t);transform:translateY(-2px);}
+.btn-ghost{display:inline-flex;align-items:center;gap:.55rem;background:transparent;color:var(--snow);padding:.75rem 1.9rem;border-radius:3px;font-weight:500;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:1px solid var(--border2);transition:all .3s;cursor:pointer;}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px);}
+.hero-stats{display:flex;gap:3rem;}
+.stat-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--snow);}
+.stat-val span{color:var(--gold);}
+.stat-lbl{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.profile-block{position:relative;display:flex;justify-content:center;}
+.profile-frame{width:340px;height:340px;border-radius:50%;position:relative;}
+.profile-frame::before{content:'';position:absolute;inset:-2px;border-radius:50%;background:linear-gradient(135deg,var(--gold) 0%,transparent 50%,var(--teal) 100%);z-index:0;}
+.profile-inner{position:absolute;inset:4px;border-radius:50%;overflow:hidden;background:var(--ink3);z-index:1;display:flex;align-items:center;justify-content:center;}
+.profile-placeholder{display:flex;flex-direction:column;align-items:center;gap:.8rem;}
+.profile-placeholder i{font-size:6rem;color:rgba(201,169,110,0.25);}
+.profile-placeholder p{font-size:.78rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;}
+.profile-badge{position:absolute;background:var(--ink2);border:1px solid var(--border2);padding:.55rem 1rem;border-radius:4px;font-size:.75rem;font-weight:500;z-index:5;white-space:nowrap;backdrop-filter:blur(12px);}
+.pb-left{bottom:-12px;left:-18px;color:var(--teal);}
+.pb-right{top:-12px;right:-18px;color:var(--gold);}
+.pb-left i,.pb-right i{margin-right:.4rem;opacity:.7;}
+.decor-line{position:absolute;right:-30px;top:50%;width:60px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);opacity:.4;}
+.scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.6rem;color:var(--muted);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;z-index:5;}
+.scroll-track{width:1px;height:48px;background:linear-gradient(var(--gold),transparent);animation:scrollDown 2s ease-in-out infinite;}
+
+/* ── SECTION BASICS ─────────────────────────────────── */
+section{position:relative;z-index:2;padding:7rem 3%;}
+.sec-head{text-align:center;margin-bottom:5rem;}
+.sec-kicker{font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem;display:block;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:500;color:var(--snow);margin-bottom:.8rem;line-height:1.15;}
+.sec-rule{width:40px;height:1px;background:linear-gradient(90deg,var(--gold),var(--teal));margin:.9rem auto 1.2rem;}
+.sec-sub{color:var(--muted);font-size:.9rem;max-width:440px;margin:0 auto;line-height:1.85;font-weight:300;}
+.inner{max-width:1200px;margin:0 auto;}
+
+/* ── WORK ───────────────────────────────────────────── */
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:1.8rem;}
+.proj-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:all .35s;cursor:default;position:relative;}
+.proj-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--teal));transform:scaleX(0);transform-origin:left;transition:transform .4s;}
+.proj-card:hover::after{transform:scaleX(1);}
+.proj-card:hover{transform:translateY(-7px);border-color:var(--border2);box-shadow:0 20px 50px rgba(0,0,0,.4);}
+.proj-img-wrap{position:relative;overflow:hidden;height:200px;}
+.proj-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;filter:brightness(.85) saturate(.9);}
+.proj-card:hover .proj-img{transform:scale(1.05);filter:brightness(.95) saturate(1.05);}
+.proj-shade{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(12,15,26,.85));}
+.proj-chip{position:absolute;top:.9rem;right:.9rem;background:rgba(12,15,26,.75);backdrop-filter:blur(8px);border:1px solid var(--border2);padding:.22rem .65rem;border-radius:2px;font-size:.65rem;font-weight:600;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;}
+.proj-body{padding:1.4rem 1.5rem 1.6rem;}
+.proj-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;margin-bottom:.45rem;color:var(--snow);}
+.proj-desc{color:var(--muted);font-size:.82rem;line-height:1.75;margin-bottom:1.1rem;}
+.proj-tags{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.1rem;}
+.chip{background:rgba(255,255,255,.045);border:1px solid var(--border);padding:.18rem .6rem;border-radius:2px;font-size:.65rem;color:var(--muted2);letter-spacing:.05em;}
+.proj-link{display:inline-flex;align-items:center;gap:.45rem;color:var(--gold);font-size:.78rem;font-weight:600;text-decoration:none;letter-spacing:.06em;text-transform:uppercase;transition:all .25s;}
+.proj-link:hover{color:var(--teal);gap:.7rem;}
+
+/* ── SERVICES ───────────────────────────────────────── */
+#services{background:linear-gradient(180deg,transparent,rgba(201,169,110,.025),transparent);}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem;max-width:860px;margin:0 auto;}
+.svc-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:2.8rem 2.2rem;text-align:center;transition:all .4s;cursor:default;position:relative;overflow:hidden;}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s;}
+.svc-card:hover::before{opacity:1;}
+.svc-card:hover{transform:translateY(-8px);border-color:var(--border2);box-shadow:0 20px 50px rgba(0,0,0,.3);}
+.svc-icon{width:64px;height:64px;border-radius:8px;background:var(--gold-dim);border:1px solid rgba(201,169,110,.25);display:flex;align-items:center;justify-content:center;margin:0 auto 1.4rem;font-size:1.6rem;color:var(--gold);transition:all .4s;}
+.svc-card:hover .svc-icon{background:var(--gold);color:var(--ink);box-shadow:0 0 24px var(--glow-g);}
+.svc-web .svc-icon{background:rgba(38,77,228,.12);border-color:rgba(38,77,228,.28);color:#264DE4;}
+.svc-app .svc-icon{background:rgba(97,218,251,.12);border-color:rgba(97,218,251,.28);color:#61DAFB;}
+.svc-digital .svc-icon{background:rgba(37,211,102,.12);border-color:rgba(37,211,102,.28);color:#25D366;}
+.svc-ideas .svc-icon{background:rgba(247,223,30,.13);border-color:rgba(247,223,30,.3);color:#F7DF1E;}
+.svc-redesign .svc-icon{background:rgba(232,115,106,.13);border-color:rgba(232,115,106,.3);color:#E8736A;}
+.svc-web:hover .svc-icon{background:#264DE4;border-color:#264DE4;color:#fff;box-shadow:0 0 24px rgba(38,77,228,.28);}
+.svc-app:hover .svc-icon{background:#61DAFB;border-color:#61DAFB;color:#07131A;box-shadow:0 0 24px rgba(97,218,251,.28);}
+.svc-digital:hover .svc-icon{background:#25D366;border-color:#25D366;color:#05150B;box-shadow:0 0 24px rgba(37,211,102,.28);}
+.svc-ideas:hover .svc-icon{background:#F7DF1E;border-color:#F7DF1E;color:#171400;box-shadow:0 0 24px rgba(247,223,30,.28);}
+.svc-redesign:hover .svc-icon{background:#E8736A;border-color:#E8736A;color:#fff;box-shadow:0 0 24px rgba(232,115,106,.28);}
+.svc-title{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:500;margin-bottom:.7rem;}
+.svc-desc{color:var(--muted);font-size:.85rem;line-height:1.8;}
+.svc-list{list-style:none;margin-top:1.5rem;text-align:left;}
+.svc-list li{color:var(--muted);font-size:.82rem;padding:.32rem 0;display:flex;align-items:center;gap:.55rem;border-bottom:1px solid var(--border);}
+.svc-list li:last-child{border:none;}
+.svc-list li::before{content:'';width:5px;height:1px;background:var(--gold);flex-shrink:0;}
+
+/* ── SKILLS ─────────────────────────────────────────── */
+.skills-wrap{max-width:1100px;margin:0 auto;}
+.skill-icons-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1rem;}
+.sk-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.4rem .8rem;text-align:center;transition:all .35s;cursor:default;}
+.sk-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.3);}
+.sk-card .ic{font-size:2rem;margin-bottom:.6rem;display:block;}
+.sk-card .brand-ic{height:2rem;display:flex;align-items:center;justify-content:center;}
+.brand-ic img{width:2rem;height:2rem;display:block;object-fit:contain;}
+.sk-html .ic{color:#E44D26;}
+.sk-css .ic{color:#264DE4;}
+.sk-js .ic{color:#F7DF1E;}
+.sk-react .ic{color:#61DAFB;}
+.sk-node .ic{color:#539E43;}
+.sk-boot .ic{color:#7952B3;}
+.sk-fb .ic{color:#FFCA28;}
+.sk-py .ic{color:#3776AB;}
+.sk-java .ic{color:#E76F00;}
+.sk-git .ic{color:#F05032;}
+.sk-web .ic{color:#3ECFB2;}
+.sk-app .ic{color:#C9A96E;}
+.sk-ai .ic{color:#10A37F;}
+.sk-claude .ic{color:#D97757;}
+.sk-ag .ic{color:#8B5CF6;}
+.sk-vscode .ic{color:#007ACC;}
+.sk-name{font-size:.7rem;font-weight:500;color:var(--muted2);letter-spacing:.06em;text-transform:uppercase;}
+
+/* ── TESTIMONIALS ───────────────────────────────────── */
+#testimonials{background:linear-gradient(180deg,transparent,rgba(62,207,178,.02),transparent);}
+.swiper{max-width:900px;margin:0 auto;padding-bottom:3rem!important;}
+.tcard{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:2.2rem 2rem;position:relative;}
+.tcard::before{content:'\201C';position:absolute;top:.5rem;right:1.5rem;font-family:'Cormorant Garamond',serif;font-size:7rem;color:rgba(201,169,110,.08);line-height:1;}
+.tstars{display:flex;gap:.2rem;margin-bottom:1rem;}
+.tstars i{color:var(--gold);font-size:.8rem;}
+.ttext{color:var(--muted);line-height:1.85;margin-bottom:1.5rem;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1rem;}
+.tauthor{display:flex;align-items:center;gap:.9rem;}
+.tav{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dim),var(--teal-dim));border:1px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600;color:var(--gold);}
+.tname{font-size:.9rem;font-weight:600;color:var(--snow);}
+.trole{font-size:.72rem;color:var(--muted);letter-spacing:.05em;}
+.swiper-pagination-bullet{background:var(--gold)!important;opacity:.3!important;}
+.swiper-pagination-bullet-active{opacity:1!important;}
+
+/* ── CONTACT ────────────────────────────────────────── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:4rem;max-width:1100px;margin:0 auto;align-items:start;}
+.cinfo{display:flex;flex-direction:column;gap:1rem;}
+.cinfo-intro{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--muted2);line-height:1.8;margin-bottom:.5rem;font-style:italic;}
+.ccard{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.2rem 1.3rem;display:flex;align-items:center;gap:1rem;text-decoration:none;color:var(--snow);transition:all .3s;}
+.ccard:hover{border-color:rgba(201,169,110,.35);transform:translateX(5px);}
+.ccard-icon{width:40px;height:40px;border-radius:5px;background:var(--gold-dim);border:1px solid rgba(201,169,110,.2);display:flex;align-items:center;justify-content:center;font-size:.95rem;color:var(--gold);flex-shrink:0;transition:all .3s;}
+.ccard:hover .ccard-icon{background:var(--gold);color:var(--ink);}
+.ccard.email .ccard-icon{background:rgba(234,67,53,.12);border-color:rgba(234,67,53,.25);color:#EA4335;}
+.ccard.email:hover .ccard-icon{background:#EA4335;border-color:#EA4335;color:#fff;}
+.ccard.whatsapp .ccard-icon{background:rgba(37,211,102,.12);border-color:rgba(37,211,102,.25);color:#25D366;}
+.ccard.whatsapp:hover .ccard-icon{background:#25D366;border-color:#25D366;color:#fff;}
+.ccard-lbl{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.18rem;}
+.ccard-val{font-size:.85rem;font-weight:500;}
+.socials{display:flex;gap:.7rem;flex-wrap:wrap;padding-top:.5rem;}
+.soc{width:38px;height:38px;border-radius:5px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:1rem;transition:all .3s;}
+.soc:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px);}
+.soc.github{background:#fff;border-color:#fff;color:#181717;}
+.soc.linkedin{color:#0A66C2;}
+.soc.mail{color:#EA4335;}
+.soc.whatsapp{color:#25D366;}
+.soc.github:hover{background:#181717;border-color:#181717;color:#fff;}
+.soc.linkedin:hover{background:#0A66C2;border-color:#0A66C2;color:#fff;}
+.soc.mail:hover{background:#EA4335;border-color:#EA4335;color:#fff;}
+.soc.whatsapp:hover{background:#25D366;border-color:#25D366;color:#fff;}
+.cform{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:2.5rem;}
+.cform-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;margin-bottom:.35rem;}
+.cform-sub{color:var(--muted);font-size:.82rem;margin-bottom:1.8rem;}
+.fg{margin-bottom:1.1rem;}
+.fg label{display:block;font-size:.7rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.45rem;}
+.fg input,.fg textarea{width:100%;background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:5px;padding:.8rem 1rem;color:var(--snow);font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:all .3s;resize:none;}
+.fg input:focus,.fg textarea:focus{border-color:rgba(201,169,110,.5);background:rgba(201,169,110,.04);box-shadow:0 0 0 3px rgba(201,169,110,.08);}
+.fg textarea{min-height:110px;}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.btn-send{width:100%;background:var(--gold);color:var(--ink);border:none;border-radius:4px;padding:.9rem;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center;gap:.5rem;box-shadow:0 4px 20px var(--glow-g);}
+.btn-send:hover{background:var(--teal);box-shadow:0 4px 24px var(--glow-t);transform:translateY(-1px);}
+.fsuccess{display:none;text-align:center;padding:3rem 1rem;}
+.fsuccess i{font-size:2.5rem;color:var(--teal);margin-bottom:1rem;display:block;}
+.fsuccess h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;margin-bottom:.5rem;}
+.fsuccess p{color:var(--muted);font-size:.85rem;}
+
+/* ── WHATSAPP / BACK-TOP ────────────────────────────── */
+.wa-btn{position:fixed;bottom:5rem;right:1.2rem;z-index:500;width:50px;height:50px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:1.35rem;box-shadow:0 4px 18px rgba(37,211,102,.35);transition:transform .3s;}
+.wa-btn:hover{transform:scale(1.1);}
+#btt{display:none !important;}
+#btt.vis{display:none !important;}
+#btt:hover{background:var(--gold);color:var(--ink);}
+
+/* ── FOOTER ─────────────────────────────────────────── */
+footer{border-top:1px solid var(--border);padding:2rem 3%;position:relative;z-index:2;background:rgba(12,15,26,.6);}
+.ft-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.ft-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--snow);}
+.ft-logo em{color:var(--gold);font-style:normal;}
+.ft-copy{font-size:.75rem;color:var(--muted);}
+.ft-copy span{color:var(--gold);}
+
+/* ── ANIMATIONS ─────────────────────────────────────── */
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-16px);}}
+@keyframes scrollDown{0%{opacity:0;height:0;}50%{opacity:1;}100%{opacity:0;height:48px;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@keyframes loaderFloat{from{transform:translateY(0) scale(.98);}to{transform:translateY(-8px) scale(1);}}
+.hero-content>*{opacity:0;animation:fadeUp .7s ease forwards;}
+.hero-content>*:nth-child(1){animation-delay:.1s;}
+.hero-content>*:nth-child(2){animation-delay:.22s;}
+.hero-content>*:nth-child(3){animation-delay:.34s;}
+.hero-content>*:nth-child(4){animation-delay:.46s;}
+.hero-content>*:nth-child(5){animation-delay:.58s;}
+.hero-content>*:nth-child(6){animation-delay:.7s;}
+.profile-block{opacity:1;}
+
+/* ── STATS STRIP ─────────────────────────────────────── */
+.stats-strip{padding:0 3% 4rem;z-index:2;position:relative;}
+.stats-strip-inner{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink2);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.stat-strip-item{padding:2rem;text-align:center;border-right:1px solid var(--border);transition:background .3s;}
+.stat-strip-item:last-child{border-right:none;}
+.stat-strip-item:hover{background:rgba(201,169,110,.04);}
+.stat-strip-val{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--snow);line-height:1;}
+.stat-strip-val em{color:var(--gold);font-style:normal;}
+.stat-strip-lbl{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:.4rem;}
+/* ── ABOUT ─────────────────────────────────────────────── */
+.about-sec{padding:4rem 3% 6rem;}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto;}
+.about-bio{color:var(--muted);font-size:.95rem;line-height:1.9;font-weight:300;margin-bottom:1.8rem;}
+.about-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem;}
+.about-pill{background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:.38rem .9rem;font-size:.75rem;color:var(--muted2);display:flex;align-items:center;gap:.4rem;transition:all .3s;}
+.about-pill:hover{border-color:rgba(201,169,110,.35);color:var(--gold);}
+.about-pill i{color:var(--gold);font-size:.7rem;}
+.about-title-left{text-align:left;}
+.about-visual-wrap{position:relative;}
+.about-img-card{border-radius:12px;overflow:hidden;height:420px;border:1px solid var(--border);position:relative;}
+.about-img-card img{width:100%;height:100%;object-fit:cover;filter:brightness(.85) saturate(.9);transition:all .5s;display:block;}
+.about-img-card:hover img{filter:brightness(.92) saturate(1);}
+.about-img-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(12,15,26,.55));}
+.about-float-card{position:absolute;background:rgba(20,24,40,.92);backdrop-filter:blur(12px);border:1px solid var(--border2);border-radius:8px;padding:.9rem 1.1rem;display:flex;align-items:center;gap:.8rem;z-index:2;}
+.about-float-a{bottom:-18px;left:-18px;}
+.about-float-b{top:-18px;right:-18px;}
+.about-float-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
+.about-float-icon.gold{background:var(--gold-dim);color:var(--gold);}
+.about-float-icon.teal{background:var(--teal-dim);color:var(--teal);}
+.about-float-val{font-size:.88rem;font-weight:600;color:var(--snow);}
+.about-float-sub{font-size:.68rem;color:var(--muted);}
+.about-accent-box{position:absolute;bottom:-28px;right:-28px;width:100px;height:100px;border:1px solid rgba(201,169,110,.18);border-radius:6px;pointer-events:none;}
+.about-accent-box2{position:absolute;top:-18px;left:-18px;width:56px;height:56px;background:rgba(62,207,178,.05);border:1px solid rgba(62,207,178,.14);border-radius:50%;pointer-events:none;}
+/* ── WHY CHOOSE ME ─────────────────────────────────────── */
+.why-sec{padding:0 3% 6rem;}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:1200px;margin:0 auto;}
+.why-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:2.2rem 1.8rem;transition:all .4s;position:relative;overflow:hidden;}
+.why-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,169,110,.06),transparent);opacity:0;transition:opacity .4s;}
+.why-card:hover::before{opacity:1;}
+.why-card:hover{border-color:var(--border2);transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.3);}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:600;color:rgba(201,169,110,.08);line-height:1;margin-bottom:.8rem;}
+.why-icon{width:48px;height:48px;border-radius:8px;background:var(--gold-dim);border:1px solid rgba(201,169,110,.2);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--gold);margin-bottom:1.2rem;transition:all .4s;}
+.why-card:hover .why-icon{background:var(--gold);color:var(--ink);}
+.why-card:nth-child(2) .why-icon{background:var(--teal-dim);border-color:rgba(62,207,178,.2);color:var(--teal);}
+.why-card:nth-child(2):hover .why-icon{background:var(--teal);color:var(--ink);}
+.why-card:nth-child(3) .why-icon{background:rgba(232,115,106,.12);border-color:rgba(232,115,106,.25);color:#E8736A;}
+.why-card:nth-child(3):hover .why-icon{background:#E8736A;color:#fff;}
+.why-card:nth-child(4) .why-icon{background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.25);color:#8B5CF6;}
+.why-card:nth-child(4):hover .why-icon{background:#8B5CF6;color:#fff;}
+.why-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;margin-bottom:.6rem;}
+.why-desc{font-size:.82rem;color:var(--muted);line-height:1.75;}
+/* ── FEATURED WORK ─────────────────────────────────────── */
+.feat-sec{padding:0 3% 6rem;}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1200px;margin:0 auto;}
+.feat-view-all{text-align:center;margin-top:2.5rem;}
+/* ── TECH MARQUEE ─────────────────────────────────────── */
+.marquee-sec{padding:2.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden;position:relative;z-index:2;}
+.marquee-sec::before,.marquee-sec::after{content:'';position:absolute;top:0;bottom:0;width:140px;z-index:2;pointer-events:none;}
+.marquee-sec::before{left:0;background:linear-gradient(90deg,var(--ink),transparent);}
+.marquee-sec::after{right:0;background:linear-gradient(-90deg,var(--ink),transparent);}
+.marquee-track{display:flex;animation:mScroll 28s linear infinite;width:max-content;}
+.marquee-track:hover{animation-play-state:paused;}
+.marquee-item{display:inline-flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap;padding:.35rem 1.6rem;border-right:1px solid var(--border);}
+.marquee-item i{font-size:.85rem;opacity:.75;}
+@keyframes mScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+/* ── CTA BANNER ─────────────────────────────────────────── */
+.cta-sec{padding:4rem 3% 7rem;}
+.cta-banner{background:linear-gradient(135deg,var(--ink2) 0%,var(--ink3) 100%);border:1px solid var(--border);border-radius:14px;padding:5rem 3rem;text-align:center;position:relative;overflow:hidden;max-width:1200px;margin:0 auto;}
+.cta-banner::before{content:'';position:absolute;top:-100px;right:-100px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,.1),transparent 70%);}
+.cta-banner::after{content:'';position:absolute;bottom:-80px;left:-80px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(62,207,178,.07),transparent 70%);}
+.cta-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);background:var(--gold-dim);border:1px solid rgba(201,169,110,.2);padding:.35rem 1rem;border-radius:2px;margin-bottom:1.4rem;}
+.cta-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:500;margin-bottom:.8rem;position:relative;z-index:1;}
+.cta-title em{color:var(--gold);font-style:italic;}
+.cta-sub{color:var(--muted);font-size:.9rem;max-width:420px;margin:0 auto 2.2rem;position:relative;z-index:1;}
+.cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+/* ── BUILD PROCESS ──────────────────────────────────────── */
+.process-sec{padding:2rem 3% 7rem;background:linear-gradient(180deg,transparent,rgba(201,169,110,.02),transparent);}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:1200px;margin:0 auto;}
+.process-step{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:2.2rem 1.6rem;text-align:center;position:relative;transition:all .4s;}
+.process-step:hover{border-color:var(--border2);transform:translateY(-5px);}
+.process-step-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:600;color:rgba(201,169,110,.1);line-height:1;margin-bottom:.5rem;}
+.process-step-icon{width:54px;height:54px;border-radius:50%;background:var(--gold-dim);border:1px solid rgba(201,169,110,.2);display:flex;align-items:center;justify-content:center;margin:0 auto 1.1rem;font-size:1.1rem;color:var(--gold);transition:all .4s;}
+.process-step:hover .process-step-icon{background:var(--gold);color:var(--ink);}
+.process-step:nth-child(2) .process-step-icon{background:var(--teal-dim);border-color:rgba(62,207,178,.2);color:var(--teal);}
+.process-step:nth-child(2):hover .process-step-icon{background:var(--teal);color:var(--ink);}
+.process-step:nth-child(3) .process-step-icon{background:rgba(232,115,106,.12);border-color:rgba(232,115,106,.25);color:#E8736A;}
+.process-step:nth-child(3):hover .process-step-icon{background:#E8736A;color:#fff;}
+.process-step:nth-child(4) .process-step-icon{background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.25);color:#8B5CF6;}
+.process-step:nth-child(4):hover .process-step-icon{background:#8B5CF6;color:#fff;}
+.process-step-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;margin-bottom:.5rem;}
+.process-step-desc{font-size:.8rem;color:var(--muted);line-height:1.7;}
+.process-arrow{position:absolute;right:-1rem;top:50%;transform:translateY(-50%);color:var(--gold);font-size:.7rem;opacity:.3;z-index:1;}
+.process-step:last-child .process-arrow{display:none;}
+/* ── HOW I WORK ─────────────────────────────────────────── */
+.hiw-sec{padding:2rem 3% 5rem;}
+.hiw-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:1200px;margin:0 auto;}
+.hiw-step{padding:2.2rem 1.8rem;border-right:1px solid var(--border);transition:background .4s;}
+.hiw-step:last-child{border-right:none;}
+.hiw-step:hover{background:rgba(201,169,110,.03);}
+.hiw-step-n{font-family:'Cormorant Garamond',serif;font-size:4rem;font-weight:600;color:rgba(201,169,110,.07);line-height:1;margin-bottom:1rem;}
+.hiw-step-icon{font-size:1.3rem;color:var(--gold);margin-bottom:.8rem;}
+.hiw-step-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;margin-bottom:.5rem;}
+.hiw-step-desc{font-size:.8rem;color:var(--muted);line-height:1.7;}
+/* ── PRICING ────────────────────────────────────────────── */
+.pricing-sec{padding:2rem 3% 7rem;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:960px;margin:0 auto;}
+.price-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:2.4rem 2rem;transition:all .4s;position:relative;}
+.price-card:hover{border-color:var(--border2);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.3);}
+.price-card.feat{border-color:rgba(201,169,110,.4);background:linear-gradient(160deg,rgba(201,169,110,.07),rgba(62,207,178,.04));}
+.price-card.feat:hover{border-color:rgba(201,169,110,.65);}
+.price-badge{position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--ink);font-size:.6rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.28rem 1rem;border-radius:0 0 4px 4px;white-space:nowrap;}
+.price-tier{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;display:block;}
+.price-val{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;line-height:1;margin-bottom:.2rem;}
+.price-val sup{font-size:1.2rem;vertical-align:super;}
+.price-val span{font-size:1rem;color:var(--muted);}
+.price-note{font-size:.75rem;color:var(--muted);margin-bottom:1.4rem;padding-bottom:1.4rem;border-bottom:1px solid var(--border);line-height:1.6;}
+.price-features{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem;}
+.price-features li{font-size:.82rem;color:var(--muted2);display:flex;align-items:center;gap:.65rem;}
+.price-features li i.fa-check{color:var(--teal);font-size:.72rem;}
+.price-features li i.fa-times{color:rgba(255,255,255,.18);font-size:.72rem;}
+.price-features li.off{opacity:.42;}
+.price-btn{display:block;text-align:center;padding:.78rem 1.5rem;border-radius:4px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .3s;border:none;font-family:'Outfit',sans-serif;width:100%;}
+.price-btn.outline{background:transparent;border:1px solid var(--border2);color:var(--snow);}
+.price-btn.outline:hover{border-color:var(--gold);color:var(--gold);}
+.price-btn.solid{background:var(--gold);color:var(--ink);box-shadow:0 4px 16px var(--glow-g);}
+.price-btn.solid:hover{background:var(--teal);box-shadow:0 4px 20px var(--glow-t);}
+/* ── JOURNEY TIMELINE ───────────────────────────────────── */
+.timeline-sec{padding:2rem 3% 7rem;}
+.timeline-wrap{max-width:760px;margin:0 auto;position:relative;}
+.timeline-wrap::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--gold),var(--teal),transparent);}
+.tl-item{display:flex;gap:2.2rem;margin-bottom:2.2rem;position:relative;}
+.tl-dot{width:56px;height:56px;border-radius:50%;background:var(--ink2);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.95rem;color:var(--gold);position:relative;z-index:1;transition:all .3s;}
+.tl-item:hover .tl-dot{background:var(--gold-dim);border-color:rgba(201,169,110,.5);}
+.tl-body{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.4rem 1.6rem;flex:1;transition:all .3s;}
+.tl-item:hover .tl-body{border-color:var(--border2);}
+.tl-year{font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;display:block;}
+.tl-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;margin-bottom:.25rem;}
+.tl-sub{font-size:.78rem;color:var(--teal);margin-bottom:.5rem;}
+.tl-desc{font-size:.82rem;color:var(--muted);line-height:1.7;}
+/* ── ACHIEVEMENT STATS BAR ──────────────────────────────── */
+.stats-bar-wrap{max-width:860px;margin:0 auto 5rem;}
+.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink2);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.sb-item{padding:1.8rem;text-align:center;border-right:1px solid var(--border);}
+.sb-item:last-child{border-right:none;}
+.sb-val{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--snow);}
+.sb-val em{color:var(--gold);font-style:normal;}
+.sb-lbl{font-size:.65rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-top:.25rem;}
+/* ── FAQ ────────────────────────────────────────────────── */
+.faq-sec{padding:2rem 3% 7rem;}
+.faq-grid{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:.7rem;}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s;}
+.faq-item.open{border-color:rgba(201,169,110,.3);}
+.faq-q{padding:1.2rem 1.4rem;display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:1rem;user-select:none;}
+.faq-q:hover{background:rgba(255,255,255,.02);}
+.faq-q span{font-size:.9rem;font-weight:500;}
+.faq-q i{color:var(--gold);transition:transform .35s;flex-shrink:0;font-size:.85rem;}
+.faq-item.open .faq-q i{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .42s cubic-bezier(.4,0,.2,1);}
+.faq-item.open .faq-a{max-height:220px;}
+.faq-a p{padding:0 1.4rem 1.4rem;font-size:.85rem;color:var(--muted);line-height:1.85;}
+/* ── PROJ CONFIDENTIAL ───────────────────────────────── */
+.proj-conf{display:inline-flex;align-items:center;gap:.45rem;color:var(--muted);font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.04);border:1px solid var(--border);padding:.32rem .85rem;border-radius:3px;user-select:none;margin-top:.1rem;}
+.proj-conf i{color:var(--gold);opacity:.6;font-size:.7rem;}
+
+/* ── HOME SKILLS & TOOLS ─────────────────────────────── */
+.home-skills-sec{padding:0 3% 6rem;}
+.home-sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.85rem;max-width:1200px;margin:0 auto;}
+.home-sk-grid .sk-card{padding:1.1rem .6rem;}
+.home-sk-grid .sk-card .ic{font-size:1.75rem;}
+.home-sk-grid .sk-card .brand-ic{height:1.75rem;}
+.home-sk-grid .sk-card .brand-ic img{width:1.75rem;height:1.75rem;}
+.home-sk-grid .sk-card .sk-name{font-size:.62rem;}
+.home-skills-cta{text-align:center;margin-top:2rem;}
+
+/* ── BOTTOM NAV ──────────────────────────────────────── */
+.bottom-nav{position:fixed;bottom:1.4rem;left:50%;transform:translateX(-50%);z-index:800;display:flex;align-items:center;gap:.3rem;background:rgba(12,15,26,.9);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border:1px solid rgba(201,169,110,.22);border-radius:16px;padding:.4rem;box-shadow:0 12px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05);}
+.bn-section{position:relative;}
+.bn-btn{display:flex;flex-direction:column;align-items:center;gap:.2rem;background:none;border:none;color:var(--muted);cursor:pointer;padding:.5rem .95rem;border-radius:10px;transition:all .3s;font-family:'Outfit',sans-serif;font-size:.6rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;min-width:62px;}
+.bn-btn i{font-size:1.05rem;transition:transform .3s;}
+.bn-btn:hover{color:var(--snow);background:rgba(255,255,255,.06);}
+.bn-btn:hover i{transform:translateY(-2px);color:var(--gold);}
+.bn-btn.bn-active{color:var(--gold);background:rgba(201,169,110,.1);}
+.bn-btn.bn-active i{color:var(--gold);}
+.bn-mid{background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.3);color:var(--gold);}
+.bn-mid:hover{background:var(--gold);color:var(--ink);border-color:var(--gold);}
+.bn-mid:hover i{color:var(--ink);}
+.bn-mid.bn-active{background:var(--gold);color:var(--ink);border-color:var(--gold);}
+.bn-mid.bn-active i{color:var(--ink);}
+.bn-right.bn-active{color:var(--teal);background:rgba(62,207,178,.1);}
+.bn-right:hover i,.bn-right.bn-active i{color:var(--teal);}
+.bn-divider{width:1px;height:34px;background:rgba(255,255,255,.07);flex-shrink:0;margin:0 .1rem;}
+/* Pages popup */
+.bn-popup{position:absolute;bottom:calc(100% + .75rem);left:50%;transform:translateX(-50%);background:rgba(12,15,26,.96);backdrop-filter:blur(24px);border:1px solid rgba(201,169,110,.2);border-radius:12px;padding:.4rem;display:none;flex-direction:column;gap:.18rem;min-width:168px;box-shadow:0 16px 48px rgba(0,0,0,.55);}
+.bn-popup.open{display:flex;animation:fadeUp .18s ease;}
+.bn-popup::after{content:'';position:absolute;bottom:-5px;left:50%;transform:translateX(-50%) rotate(45deg);width:9px;height:9px;background:rgba(12,15,26,.96);border-right:1px solid rgba(201,169,110,.2);border-bottom:1px solid rgba(201,169,110,.2);}
+.bn-plink{display:flex;align-items:center;gap:.6rem;padding:.55rem .85rem;border-radius:8px;color:var(--muted2);text-decoration:none;font-size:.8rem;font-weight:500;cursor:pointer;transition:all .22s;border:none;background:none;width:100%;text-align:left;font-family:'Outfit',sans-serif;}
+.bn-plink:hover{background:rgba(201,169,110,.1);color:var(--gold);}
+.bn-plink.active{background:rgba(201,169,110,.12);color:var(--gold);}
+.bn-plink i{width:15px;text-align:center;font-size:.8rem;color:var(--gold);opacity:.7;flex-shrink:0;}
+
+/* ── CERTIFICATIONS ──────────────────────────────────── */
+.cert-sec{padding:7rem 3%;}
+.cert-intro-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:700px;margin:0 auto 4rem;background:var(--ink2);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.cis-item{padding:1.4rem;text-align:center;border-right:1px solid var(--border);}
+.cis-item:last-child{border-right:none;}
+.cis-val{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:600;color:var(--gold);line-height:1;}
+.cis-lbl{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.6rem;max-width:1200px;margin:0 auto;}
+/* Glassmorphism card */
+.cert-card{background:rgba(255,255,255,.04);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.09);border-radius:16px;overflow:hidden;transition:all .4s;position:relative;}
+.cert-card:hover{border-color:rgba(201,169,110,.35);transform:translateY(-8px);box-shadow:0 24px 64px rgba(0,0,0,.45);background:rgba(201,169,110,.04);}
+.cert-img{position:relative;height:160px;overflow:hidden;}
+.cert-img img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.65) saturate(.75);transition:all .5s;}
+.cert-card:hover .cert-img img{filter:brightness(.75) saturate(.9);transform:scale(1.06);}
+.cert-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,130,200,.4) 0%,rgba(12,15,26,.75) 100%);}
+.cert-hp-badge{position:absolute;top:.85rem;left:.85rem;background:rgba(255,255,255,.93);border-radius:6px;padding:.28rem .6rem;font-size:.58rem;font-weight:800;letter-spacing:.1em;color:#0096D6;text-transform:uppercase;display:flex;align-items:center;gap:.3rem;}
+.cert-hp-badge i{font-size:.7rem;}
+.cert-num-tag{position:absolute;top:.85rem;right:.85rem;background:rgba(12,15,26,.8);backdrop-filter:blur(6px);border:1px solid rgba(201,169,110,.25);padding:.2rem .55rem;border-radius:2px;font-size:.56rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;}
+.cert-body{padding:1.25rem 1.35rem 1.4rem;}
+.cert-issuer{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.42rem;display:flex;align-items:center;gap:.38rem;}
+.cert-issuer i{color:var(--gold);opacity:.7;font-size:.6rem;}
+.cert-title{font-family:'Cormorant Garamond',serif;font-size:1.13rem;font-weight:600;color:var(--snow);margin-bottom:.5rem;line-height:1.25;}
+.cert-desc{font-size:.79rem;color:var(--muted);line-height:1.7;margin-bottom:1rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.cert-footer{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;}
+.cert-date{display:flex;align-items:center;gap:.35rem;font-size:.7rem;color:var(--muted2);}
+.cert-date i{font-size:.62rem;color:var(--gold);}
+.cert-verify{display:inline-flex;align-items:center;gap:.38rem;background:rgba(0,150,214,.12);border:1px solid rgba(0,150,214,.32);color:#4DB8E8;padding:.28rem .7rem;border-radius:4px;font-size:.68rem;font-weight:600;text-decoration:none;transition:all .3s;letter-spacing:.05em;text-transform:uppercase;}
+.cert-verify:hover{background:#0096D6;border-color:#0096D6;color:#fff;transform:translateX(2px);}
+.cert-serial{font-size:.58rem;color:rgba(255,255,255,.18);margin-top:.6rem;font-family:monospace;letter-spacing:.04em;word-break:break-all;}
+/* Home preview strip */
+.home-cert-sec{padding:0 3% 6rem;}
+.home-cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.3rem;max-width:1200px;margin:0 auto;}
+.home-cert-cta{text-align:center;margin-top:2rem;}
+
+/* ── LANDING PAGE (NEW HOME) ─────────────────────────── */
+.lp-hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;padding:8rem 3% 5rem;text-align:center;overflow:hidden;}
+.lp-hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(201,169,110,.055) 0%,transparent 65%);pointer-events:none;z-index:0;}
+.lp-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:2;}
+.lp-hero-eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.68rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);background:var(--gold-dim);border:1px solid rgba(201,169,110,.22);padding:.45rem 1.3rem;border-radius:999px;margin-bottom:2rem;}
+.lp-hero-h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:500;line-height:1.06;margin-bottom:1.4rem;color:var(--snow);}
+.lp-hero-h1 em{font-style:italic;color:var(--gold);}
+.lp-hero-sub{font-size:clamp(.9rem,1.3vw,1.05rem);color:var(--muted2);max-width:600px;margin:0 auto;line-height:1.85;font-weight:300;}
+.lp-trust{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border);}
+.lp-trust-item{display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:var(--muted);letter-spacing:.08em;}
+.lp-trust-item i{color:var(--gold);font-size:.8rem;}
+/* Offer grid (cert-derived capabilities) */
+.offer-sec{padding:6rem 3%;}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1200px;margin:0 auto;}
+.offer-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:2rem 1.8rem;transition:all .4s;position:relative;overflow:hidden;}
+.offer-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s;}
+.offer-card:hover::before{opacity:1;}
+.offer-card:hover{transform:translateY(-6px);border-color:var(--border2);box-shadow:0 18px 45px rgba(0,0,0,.3);}
+.offer-card-icon{width:52px;height:52px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:1.2rem;transition:all .4s;}
+.offer-card-cert{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:flex;align-items:center;gap:.35rem;opacity:.8;}
+.offer-card-cert::before{content:'';flex:0 0 12px;height:1px;background:var(--gold);}
+.offer-card-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;margin-bottom:.5rem;color:var(--snow);}
+.offer-card-desc{font-size:.82rem;color:var(--muted);line-height:1.75;}
+/* Tool stack (landing) */
+.lp-stack-sec{padding:5rem 3%;background:linear-gradient(180deg,transparent,rgba(62,207,178,.02),transparent);}
+.lp-stack-inner{max-width:1100px;margin:0 auto;}
+.lp-stack-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:3rem;}
+.lp-sk{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:1.2rem .8rem;text-align:center;transition:all .3s;cursor:default;}
+.lp-sk:hover{border-color:var(--border2);transform:translateY(-3px);}
+.lp-sk .ic{font-size:1.8rem;margin-bottom:.4rem;display:block;}
+/* PDF cert button */
+.cert-pdf-btn{display:inline-flex;align-items:center;gap:.38rem;color:var(--teal);font-size:.68rem;font-weight:600;text-decoration:none;letter-spacing:.06em;padding:.26rem .72rem;border:1px solid rgba(62,207,178,.3);border-radius:4px;transition:all .25s;background:rgba(62,207,178,.06);text-transform:uppercase;}
+.cert-pdf-btn:hover{background:rgba(62,207,178,.15);border-color:rgba(62,207,178,.55);transform:translateX(2px);}
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media(max-width:960px){
+  .hero-wrap{grid-template-columns:1fr;text-align:center;gap:3.5rem;}
+  .hero-eyebrow{justify-content:center;}
+  .hero-desc{margin:0 auto 2.5rem;}
+  .hero-btns{justify-content:center;}
+  .hero-stats{justify-content:center;}
+  .cert-grid{grid-template-columns:repeat(2,1fr);}
+  .home-cert-grid{grid-template-columns:repeat(2,1fr);}
+  .cert-intro-stats{grid-template-columns:repeat(3,1fr);max-width:100%;}
+  .why-grid{grid-template-columns:repeat(2,1fr);}
+  .feat-grid{grid-template-columns:repeat(2,1fr);}
+  .stats-strip-inner{grid-template-columns:repeat(2,1fr);}
+  .process-grid{grid-template-columns:repeat(2,1fr);}
+  .hiw-grid{grid-template-columns:repeat(2,1fr);}
+  .pricing-grid{grid-template-columns:1fr;max-width:480px;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);}
+  .contact-grid{grid-template-columns:1fr;}
+  nav .nav-links{display:none;}
+  .hamburger{display:flex;}
+  nav{padding:1.2rem 1.8rem;}
+  nav.scrolled{padding:.9rem 1.8rem;}
+}
+@media(max-width:900px){
+  .offer-grid{grid-template-columns:repeat(2,1fr);}
+  .lp-stack-grid{grid-template-columns:repeat(4,1fr);}
+}
+@media(max-width:600px){
+  .offer-grid{grid-template-columns:1fr;}
+  .lp-stack-grid{grid-template-columns:repeat(3,1fr);}
+  .lp-trust{gap:1rem;}
+  .lp-hero{padding:7rem 5% 4rem;}
+  #preloader{padding:1.5rem;}
+  .home-sk-grid{grid-template-columns:repeat(4,1fr);}
+  .loader-mark{width:130px;height:130px;}
+  .bottom-nav{bottom:1rem;}
+  .bn-btn{padding:.42rem .7rem;font-size:.55rem;min-width:54px;}
+  .bn-btn i{font-size:.95rem;}
+  .wa-btn{bottom:5.5rem;right:1rem;width:44px;height:44px;font-size:1.2rem;}
+  .loader-logo{font-size:clamp(1.5rem,7vw,2rem);}
+  .loader-tagline{font-size:.62rem;letter-spacing:.18em;}
+  .loader-progress-container{width:min(72vw,240px);}
+  #home{padding:7rem 5% 2rem;min-height:auto;}
+  .hero-wrap{grid-template-columns:1fr;gap:1.75rem;align-items:start;}
+  .hero-eyebrow{display:none;}
+  .hero-name{font-size:clamp(1.95rem,9vw,2.45rem);line-height:1.02;margin-bottom:.6rem;}
+  .hero-role{font-size:.8rem;letter-spacing:.06em;margin-bottom:1.2rem;}
+  .hero-desc{font-size:.9rem;line-height:1.8;max-width:100%;margin-bottom:1.8rem;}
+  .hero-btns{gap:.75rem;justify-content:center;}
+  .hero-stats{gap:1.2rem 1.5rem;flex-wrap:wrap;justify-content:center;}
+  .profile-frame{width:260px;height:260px;}
+  .profile-badge{font-size:.68rem;padding:.45rem .8rem;}
+  .pb-left{left:-6px;bottom:-8px;}
+  .pb-right{right:-6px;top:-8px;}
+  section{padding:5rem 5%;}
+  .stats-strip{padding:0 5% 4rem;}
+  .stats-strip-inner{grid-template-columns:repeat(2,1fr);}
+  .about-sec,.why-sec,.feat-sec,.cta-sec{padding-left:5%;padding-right:5%;}
+  .about-img-card{height:280px;}
+  .about-float-a{display:none;}
+  .about-float-b{display:none;}
+  .why-grid{grid-template-columns:1fr;}
+  .feat-grid{grid-template-columns:1fr;}
+  .marquee-sec::before,.marquee-sec::after{width:60px;}
+  .cta-banner{padding:3rem 1.5rem;}
+  .process-sec,.hiw-sec,.pricing-sec,.timeline-sec,.faq-sec{padding-left:5%;padding-right:5%;}
+  .cert-grid{grid-template-columns:1fr;}
+  .home-cert-grid{grid-template-columns:1fr;}
+  .cert-sec{padding:5rem 5%;}
+  .home-cert-sec{padding:0 5% 5rem;}
+  .process-arrow{display:none;}
+  .hiw-grid{grid-template-columns:1fr;}
+  .hiw-step{border-right:none;border-bottom:1px solid var(--border);}
+  .hiw-step:last-child{border-bottom:none;}
+  .pricing-grid{grid-template-columns:1fr;}
+  .stats-bar{grid-template-columns:repeat(2,1fr);}
+  .skill-icons-grid{grid-template-columns:repeat(3,1fr);}
+  .proj-grid{grid-template-columns:1fr;}
+  .fg-row{grid-template-columns:1fr;}
+  .ft-inner{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader" aria-label="Loading website">
+  <div class="loader-content-wrap">
+    <div class="loader-mark">
+      <div class="loader-photo">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+             alt="Anil Jakkula"
+             onerror="this.parentElement.style.background='var(--ink3)'">
+      </div>
+    </div>
+    <div class="loader-logo">Sril Connect</div>
+    <div class="loader-tagline">Web Development Agency &nbsp;&middot;&nbsp; Founded by Anil Jakkula</div>
+    <div class="loader-progress-container">
+      <div class="loader-line-track">
+        <div class="loader-line-fill" id="loaderFill"></div>
+      </div>
+      <div class="loader-percentage" id="loaderPercent">0%</div>
+    </div>
+  </div>
+</div>
+
+<div id="prog"></div>
+<div id="mglow"></div>
+<div id="particles-js"></div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a class="nav-logo" href="#home" data-page="home">Sril<em>Connect</em></a>
+  <ul class="nav-links">
+    <li><a href="#home"             data-page="home"             class="active">Home</a></li>
+    <li><a href="#profile"          data-page="profile">Profile</a></li>
+    <li><a href="#work"             data-page="work">Work</a></li>
+    <li><a href="#services"         data-page="services">Services</a></li>
+    <li><a href="#skills"           data-page="skills">Skills</a></li>
+    <li><a href="#certifications"   data-page="certifications">Certs</a></li>
+    <li><a href="#testimonials"     data-page="testimonials">Reviews</a></li>
+    <li><a href="#contact"          data-page="contact" class="nav-cta">Hire Me</a></li>
+  </ul>
+  <button class="hamburger" id="hbg" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mob">
+  <button class="close-mob" id="closeMob" aria-label="Close menu"><i class="fa fa-times"></i></button>
+  <a href="#home"             data-page="home">Home</a>
+  <a href="#profile"          data-page="profile">Profile</a>
+  <a href="#work"             data-page="work">Work</a>
+  <a href="#services"         data-page="services">Services</a>
+  <a href="#skills"           data-page="skills">Skills</a>
+  <a href="#certifications"   data-page="certifications">Certifications</a>
+  <a href="#testimonials"     data-page="testimonials">Reviews</a>
+  <a href="#contact"          data-page="contact">Contact</a>
+</div>
+
+<!-- ════════════════════════ PAGES ════════════════════════ -->
+
+<!-- PAGE: HOME (Business Landing) -->
+<div class="page" id="pg-home">
+
+<section class="lp-hero">
+  <div class="lp-hero-inner">
+    <div class="lp-hero-eyebrow"><i class="fa fa-certificate"></i>&nbsp; Sril Connect &nbsp;&middot;&nbsp; 9 HP LIFE Certifications &nbsp;&middot;&nbsp; Nirmal, Telangana</div>
+    <h1 class="lp-hero-h1">We Build Digital <em>Presence</em><br>for Your Business</h1>
+    <p class="lp-hero-sub">Sril Connect combines certified business strategy, social media marketing knowledge, and full-stack web development — delivering websites and web apps that work harder for your business goals.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.2rem;">
+      <a href="#contact" data-page="contact" class="btn-primary"><i class="fa fa-paper-plane"></i> Start a Project</a>
+      <a href="#work"    data-page="work"    class="btn-ghost"   ><i class="fa fa-eye"></i> View Our Work</a>
+    </div>
+    <div class="lp-trust" data-aos="fade-up">
+      <div class="lp-trust-item"><i class="fa fa-certificate"></i>9 HP LIFE Certificates</div>
+      <div class="lp-trust-item"><i class="fa fa-briefcase"></i>270+ Projects Delivered</div>
+      <div class="lp-trust-item"><i class="fa fa-star"></i>100% Satisfaction</div>
+      <div class="lp-trust-item"><i class="fa fa-map-marker-alt"></i>Nirmal · Telangana</div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH MARQUEE -->
+<div class="marquee-sec">
+  <div class="marquee-track">
+    <div class="marquee-item"><i class="fab fa-html5" style="color:#E44D26"></i>HTML5</div>
+    <div class="marquee-item"><i class="fab fa-css3-alt" style="color:#264DE4"></i>CSS3</div>
+    <div class="marquee-item"><i class="fab fa-js-square" style="color:#F7DF1E"></i>JavaScript</div>
+    <div class="marquee-item"><i class="fab fa-react" style="color:#61DAFB"></i>React</div>
+    <div class="marquee-item"><i class="fas fa-fire" style="color:#FFCA28"></i>Firebase</div>
+    <div class="marquee-item"><i class="fab fa-node-js" style="color:#539E43"></i>Node.js</div>
+    <div class="marquee-item"><i class="fab fa-bootstrap" style="color:#7952B3"></i>Bootstrap</div>
+    <div class="marquee-item"><i class="fab fa-python" style="color:#3776AB"></i>Python</div>
+    <div class="marquee-item"><i class="fab fa-git-alt" style="color:#F05032"></i>Git</div>
+    <div class="marquee-item"><i class="fa fa-database" style="color:#C9A96E"></i>Firestore</div>
+    <div class="marquee-item"><i class="fab fa-java" style="color:#E76F00"></i>Java</div>
+    <div class="marquee-item"><i class="fa fa-mobile-alt" style="color:#3ECFB2"></i>Responsive</div>
+    <div class="marquee-item"><i class="fab fa-html5" style="color:#E44D26"></i>HTML5</div>
+    <div class="marquee-item"><i class="fab fa-css3-alt" style="color:#264DE4"></i>CSS3</div>
+    <div class="marquee-item"><i class="fab fa-js-square" style="color:#F7DF1E"></i>JavaScript</div>
+    <div class="marquee-item"><i class="fab fa-react" style="color:#61DAFB"></i>React</div>
+    <div class="marquee-item"><i class="fas fa-fire" style="color:#FFCA28"></i>Firebase</div>
+    <div class="marquee-item"><i class="fab fa-node-js" style="color:#539E43"></i>Node.js</div>
+    <div class="marquee-item"><i class="fab fa-bootstrap" style="color:#7952B3"></i>Bootstrap</div>
+    <div class="marquee-item"><i class="fab fa-python" style="color:#3776AB"></i>Python</div>
+    <div class="marquee-item"><i class="fab fa-git-alt" style="color:#F05032"></i>Git</div>
+    <div class="marquee-item"><i class="fa fa-database" style="color:#C9A96E"></i>Firestore</div>
+    <div class="marquee-item"><i class="fab fa-java" style="color:#E76F00"></i>Java</div>
+    <div class="marquee-item"><i class="fa fa-mobile-alt" style="color:#3ECFB2"></i>Responsive</div>
+  </div>
+</div>
+
+<!-- WHAT WE OFFER (cert-backed capabilities) -->
+<section class="offer-sec">
+  <div class="inner">
+    <div class="sec-head" data-aos="fade-up">
+      <span class="sec-kicker">HP LIFE Certified Expertise</span>
+      <h2 class="sec-title">What We Bring to Your <em>Business</em></h2>
+      <div class="sec-rule"></div>
+      <p class="sec-sub">Every service we deliver is backed by certified knowledge — business strategy, digital marketing, technology integration, and customer management.</p>
+    </div>
+    <div class="offer-grid">
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="offer-card-icon" style="background:rgba(38,77,228,.12);border:1px solid rgba(38,77,228,.28);color:#264DE4;"><i class="fa fa-globe"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Effective Business Websites</div>
+        <h3 class="offer-card-title">Business Website Design</h3>
+        <p class="offer-card-desc">Websites built on proven best practices — optimised for customer behaviour, conversion, and measurable performance metrics.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="offer-card-icon" style="background:rgba(232,115,106,.12);border:1px solid rgba(232,115,106,.28);color:#E8736A;"><i class="fa fa-hashtag"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Social Media Marketing</div>
+        <h3 class="offer-card-title">Social Media Marketing</h3>
+        <p class="offer-card-desc">Targeted social campaigns, platform advertising, and effective social media strategies to grow your business audience online.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="offer-card-icon" style="background:var(--teal-dim);border:1px solid rgba(62,207,178,.28);color:var(--teal);"><i class="fa fa-microchip"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · IT for Business Success</div>
+        <h3 class="offer-card-title">Technology Integration</h3>
+        <p class="offer-card-desc">Selecting and integrating the right tech stack for your business to maximise efficiency, reduce manual work, and drive growth.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="offer-card-icon" style="background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.28);color:#8B5CF6;"><i class="fa fa-chart-bar"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Data Science &amp; Analytics</div>
+        <h3 class="offer-card-title">Data-Driven Insights</h3>
+        <p class="offer-card-desc">Turning your business data into actionable insights — analytics dashboards, metrics tracking, and data-informed decision systems.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="offer-card-icon" style="background:var(--gold-dim);border:1px solid rgba(201,169,110,.28);color:var(--gold);"><i class="fa fa-users"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Customer Relationship Management</div>
+        <h3 class="offer-card-title">CRM &amp; Customer Systems</h3>
+        <p class="offer-card-desc">Building digital systems to understand your customers better — tracking habits, improving loyalty, and growing repeat business.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="offer-card-icon" style="background:rgba(62,207,178,.08);border:1px solid rgba(62,207,178,.22);color:var(--teal);"><i class="fa fa-network-wired"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Professional Networking</div>
+        <h3 class="offer-card-title">Digital Presence &amp; Branding</h3>
+        <p class="offer-card-desc">Crafting your professional online identity — portfolio sites, brand strategy, and digital profiles that open doors and build credibility.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="offer-card-icon" style="background:rgba(247,223,30,.1);border:1px solid rgba(247,223,30,.28);color:#F7DF1E;"><i class="fa fa-sitemap"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Business Models &amp; Characteristics</div>
+        <h3 class="offer-card-title">Digital Business Strategy</h3>
+        <p class="offer-card-desc">Understanding digital and omni-channel models to position your business for growth — from payments and presence to customer analytics.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="60">
+        <div class="offer-card-icon" style="background:rgba(232,115,106,.08);border:1px solid rgba(232,115,106,.22);color:#E8736A;"><i class="fa fa-clipboard-list"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Effective Leadership</div>
+        <h3 class="offer-card-title">Project Management &amp; Delivery</h3>
+        <p class="offer-card-desc">Structured project delivery with clear milestones, transparent communication, and ethical leadership at every stage of the build.</p>
+      </div>
+
+      <div class="offer-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="offer-card-icon" style="background:var(--gold-dim);border:1px solid rgba(201,169,110,.22);color:var(--gold);"><i class="fa fa-bullseye"></i></div>
+        <div class="offer-card-cert"><i class="fa fa-certificate" style="font-size:.55rem"></i>Certified · Success Mindset</div>
+        <h3 class="offer-card-title">Goal-Oriented Development</h3>
+        <p class="offer-card-desc">Every project starts with your goals — we build what helps you achieve them, not just what looks good, but what actually works.</p>
+      </div>
+
+    </div>
+    <div style="text-align:center;margin-top:2.5rem;" data-aos="fade-up">
+      <a href="#certifications" data-page="certifications" class="btn-ghost"><i class="fa fa-certificate"></i> View All 9 Certifications</a>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS WE BUILD WITH -->
+<section class="lp-stack-sec">
+  <div class="lp-stack-inner">
+    <div class="sec-head" data-aos="fade-up">
+      <span class="sec-kicker">The Stack</span>
+      <h2 class="sec-title">Tools We <em>Build With</em></h2>
+      <div class="sec-rule"></div>
+      <p class="sec-sub">Modern, proven technologies — every one battle-tested across real client projects, chosen for speed, reliability, and scalability.</p>
+    </div>
+    <div class="lp-stack-grid" data-aos="fade-up">
+      <div class="lp-sk sk-html"><span class="ic"><i class="fab fa-html5"></i></span><div class="sk-name">HTML5</div></div>
+      <div class="lp-sk sk-css"><span class="ic"><i class="fab fa-css3-alt"></i></span><div class="sk-name">CSS3</div></div>
+      <div class="lp-sk sk-js"><span class="ic"><i class="fab fa-js-square"></i></span><div class="sk-name">JS</div></div>
+      <div class="lp-sk sk-react"><span class="ic"><i class="fab fa-react"></i></span><div class="sk-name">React</div></div>
+      <div class="lp-sk sk-node"><span class="ic"><i class="fab fa-node-js"></i></span><div class="sk-name">Node.js</div></div>
+      <div class="lp-sk sk-boot"><span class="ic"><i class="fab fa-bootstrap"></i></span><div class="sk-name">Bootstrap</div></div>
+      <div class="lp-sk sk-fb"><span class="ic"><i class="fas fa-fire"></i></span><div class="sk-name">Firebase</div></div>
+      <div class="lp-sk sk-py"><span class="ic"><i class="fab fa-python"></i></span><div class="sk-name">Python</div></div>
+      <div class="lp-sk sk-java"><span class="ic"><i class="fab fa-java"></i></span><div class="sk-name">Java</div></div>
+      <div class="lp-sk sk-git"><span class="ic"><i class="fab fa-git-alt"></i></span><div class="sk-name">Git</div></div>
+      <div class="lp-sk sk-ai"><span class="ic brand-ic"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg" alt="ChatGPT" loading="lazy"></span><div class="sk-name">ChatGPT</div></div>
+      <div class="lp-sk sk-vscode"><span class="ic brand-ic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy"></span><div class="sk-name">VS Code</div></div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;" data-aos="fade-up">
+      <a href="#skills" data-page="skills" class="btn-ghost"><i class="fa fa-th"></i> Full Tech Stack</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-sec">
+  <div class="inner">
+    <div class="cta-banner" data-aos="zoom-in">
+      <div class="cta-badge"><i class="fa fa-circle" style="font-size:.5rem;color:var(--teal)"></i>&nbsp;Sril Connect &nbsp;&middot;&nbsp; Open for Projects</div>
+      <h2 class="cta-title">Ready to Build Something <em>Outstanding?</em></h2>
+      <p class="cta-sub">Let's discuss your idea and Sril Connect will build a digital product your customers will love.</p>
+      <div class="cta-btns">
+        <a href="#contact" data-page="contact" class="btn-primary"><i class="fa fa-paper-plane"></i> Start a Project</a>
+        <a href="#profile" data-page="profile" class="btn-ghost"><i class="fa fa-user"></i> Meet Anil</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- PAGE: PROFILE (ex-Home · Anil's bio, skills & about) -->
+<div class="page" id="pg-profile">
+<section id="home">
+  <div class="hero-wrap">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Founder &amp; Lead Developer &nbsp;&middot;&nbsp; Sril Connect</div>
+      <h1 class="hero-name">Anil <em>Jakkula</em></h1>
+      <div class="hero-role">
+        <div class="typed-wrap"><span id="typed"></span><span class="typed-cur">|</span></div>
+      </div>
+      <p class="hero-desc"><strong style="color:var(--gold);font-weight:600;">Sril Connect</strong> is a modern web development agency. I'm Anil Jakkula — Founder &amp; Full Stack Developer — building responsive websites and powerful web applications that help businesses grow digitally.</p>
+      <div class="hero-btns">
+        <a href="#contact" data-page="contact" class="btn-primary"><i class="fa fa-paper-plane"></i> Start Freelance Project</a>
+        <a href="#work"    data-page="work"    class="btn-ghost"><i class="fa fa-eye"></i> View Work</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-val">270<span>+</span></div><div class="stat-lbl">Projects</div></div>
+        <div><div class="stat-val">100<span>%</span></div><div class="stat-lbl">Satisfaction</div></div>
+        <div><div class="stat-val">2<span>+</span></div><div class="stat-lbl">Years Exp</div></div>
+      </div>
+    </div>
+    <div class="profile-block" style="animation:float 5s ease-in-out infinite 1s;">
+      <div class="profile-frame">
+        <div class="profile-inner">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+               alt="Anil Jakkula"
+               style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+        </div>
+        <div class="profile-badge pb-left"><i class="fa fa-code"></i>Full Stack Dev</div>
+        <div class="profile-badge pb-right"><i class="fa fa-building"></i>Founder</div>
+      </div>
+      <div class="decor-line"></div>
+    </div>
+  </div>
+  <!-- <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-track"></div>
+  </div> -->
+</section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip" data-aos="fade-up">
+    <div class="stats-strip-inner inner">
+      <div class="stat-strip-item"><div class="stat-strip-val">270<em>+</em></div><div class="stat-strip-lbl">Projects Delivered</div></div>
+      <div class="stat-strip-item"><div class="stat-strip-val">100<em>%</em></div><div class="stat-strip-lbl">Client Satisfaction</div></div>
+      <div class="stat-strip-item"><div class="stat-strip-val">2<em>+</em></div><div class="stat-strip-lbl">Years Experience</div></div>
+      <div class="stat-strip-item"><div class="stat-strip-val">5<em>★</em></div><div class="stat-strip-lbl">Average Rating</div></div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about-sec">
+    <div class="about-inner inner">
+      <div data-aos="fade-right">
+        <span class="sec-kicker">About Me</span>
+        <h2 class="sec-title about-title-left">Building Digital <em>Experiences</em> with Sril Connect</h2>
+        <div class="sec-rule" style="margin:.9rem 0 1.5rem;"></div>
+        <p class="about-bio">I'm Anil Jakkula, Founder &amp; Lead Developer of <strong style="color:var(--gold);font-weight:600;">Sril Connect</strong> — a digital agency based in India. With 2+ years of experience, I build responsive websites and powerful web applications that turn business ideas into clean, performant digital products solving real-world problems.</p>
+        <div class="about-pills">
+          <div class="about-pill"><i class="fa fa-code"></i>Clean Code</div>
+          <div class="about-pill"><i class="fa fa-mobile-alt"></i>Mobile First</div>
+          <div class="about-pill"><i class="fa fa-clock"></i>On-Time Delivery</div>
+          <div class="about-pill"><i class="fa fa-comments"></i>Clear Communication</div>
+          <div class="about-pill"><i class="fa fa-shield-alt"></i>Secure &amp; Scalable</div>
+          <div class="about-pill"><i class="fa fa-check-circle"></i>100% Satisfaction</div>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="#contact" data-page="contact" class="btn-primary"><i class="fa fa-paper-plane"></i>Hire Me</a>
+          <a href="#work"    data-page="work"    class="btn-ghost"><i class="fa fa-briefcase"></i>My Projects</a>
+        </div>
+      </div>
+      <div class="about-visual-wrap" data-aos="fade-left">
+        <div class="about-img-card">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=80" alt="Developer at work">
+        </div>
+        <div class="about-float-card about-float-a">
+          <div class="about-float-icon teal"><i class="fa fa-fire"></i></div>
+          <div><div class="about-float-val">React &amp; Firebase</div><div class="about-float-sub">Core Tech Stack</div></div>
+        </div>
+        <div class="about-float-card about-float-b">
+          <div class="about-float-icon gold"><i class="fa fa-trophy"></i></div>
+          <div><div class="about-float-val">270+ Projects Done</div><div class="about-float-sub">Successfully Delivered</div></div>
+        </div>
+        <div class="about-accent-box"></div>
+        <div class="about-accent-box2"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE ME -->
+  <section class="why-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">Why Work With Me</span>
+        <h2 class="sec-title">What Sets Me Apart</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Sril Connect doesn't just write code — we solve business problems with technology.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="why-num">01</div>
+          <div class="why-icon"><i class="fa fa-bolt"></i></div>
+          <h3 class="why-title">Fast Delivery</h3>
+          <p class="why-desc">Projects shipped on schedule without cutting corners on quality or attention to detail.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="why-num">02</div>
+          <div class="why-icon"><i class="fa fa-gem"></i></div>
+          <h3 class="why-title">Quality Code</h3>
+          <p class="why-desc">Clean, maintainable, well-structured code that is easy to update and scale as your business grows.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="why-num">03</div>
+          <div class="why-icon"><i class="fa fa-headset"></i></div>
+          <h3 class="why-title">Client Focus</h3>
+          <p class="why-desc">I listen first, then build. Your vision and business goals guide every design and development decision.</p>
+        </div>
+        <div class="why-card" data-aos="fade-up" data-aos-delay="240">
+          <div class="why-num">04</div>
+          <div class="why-icon"><i class="fa fa-sync-alt"></i></div>
+          <h3 class="why-title">Ongoing Support</h3>
+          <p class="why-desc">Post-launch help, quick fixes, and updates so your website keeps performing long after delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="feat-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">Selected Work</span>
+        <h2 class="sec-title">Featured Projects</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">A glimpse of recent work built for real businesses.</p>
+      </div>
+      <div class="feat-grid">
+        <div class="proj-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="proj-img-wrap"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Best Tailor Shop" class="proj-img" loading="lazy"><div class="proj-shade"></div><span class="proj-chip">Web App</span></div>
+          <div class="proj-body"><h3 class="proj-title">Best Tailor Shop</h3><p class="proj-desc">Full-featured tailor shop app with booking, measurements and order management.</p><div class="proj-tags"><span class="chip">Firebase</span><span class="chip">JS</span></div><span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span></div>
+        </div>
+        <div class="proj-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="proj-img-wrap"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Mayil Beauty" class="proj-img" loading="lazy"><div class="proj-shade"></div><span class="proj-chip">Website</span></div>
+          <div class="proj-body"><h3 class="proj-title">Mayil Beauty Parlour</h3><p class="proj-desc">Elegant parlour website with service menu, gallery and appointment booking.</p><div class="proj-tags"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span></div><span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span></div>
+        </div>
+        <div class="proj-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="proj-img-wrap"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80" alt="Coding Hub" class="proj-img" loading="lazy"><div class="proj-shade"></div><span class="proj-chip">Full Stack</span></div>
+          <div class="proj-body"><h3 class="proj-title">Coding Practice Platform</h3><p class="proj-desc">Full-stack platform for learners with coding problems, tutorials and progress tracking.</p><div class="proj-tags"><span class="chip">Firebase</span><span class="chip">Razorpay</span></div><span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span></div>
+        </div>
+      </div>
+      <div class="feat-view-all" data-aos="fade-up">
+        <a href="#work" data-page="work" class="btn-ghost"><i class="fa fa-th"></i> View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS & TOOLS (Home) -->
+  <section class="home-skills-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">Technical Expertise</span>
+        <h2 class="sec-title">Skills &amp; <em>Tools</em></h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Technologies I use every day to build fast, modern digital products.</p>
+      </div>
+      <div class="home-sk-grid">
+        <div class="sk-card sk-html"   data-aos="zoom-in" data-aos-delay="0">  <span class="ic"><i class="fab fa-html5"></i></span>    <div class="sk-name">HTML5</div></div>
+        <div class="sk-card sk-css"    data-aos="zoom-in" data-aos-delay="30"> <span class="ic"><i class="fab fa-css3-alt"></i></span>  <div class="sk-name">CSS3</div></div>
+        <div class="sk-card sk-js"     data-aos="zoom-in" data-aos-delay="60"> <span class="ic"><i class="fab fa-js-square"></i></span> <div class="sk-name">JS</div></div>
+        <div class="sk-card sk-react"  data-aos="zoom-in" data-aos-delay="90"> <span class="ic"><i class="fab fa-react"></i></span>     <div class="sk-name">React</div></div>
+        <div class="sk-card sk-node"   data-aos="zoom-in" data-aos-delay="120"><span class="ic"><i class="fab fa-node-js"></i></span>   <div class="sk-name">Node.js</div></div>
+        <div class="sk-card sk-boot"   data-aos="zoom-in" data-aos-delay="150"><span class="ic"><i class="fab fa-bootstrap"></i></span> <div class="sk-name">Bootstrap</div></div>
+        <div class="sk-card sk-fb"     data-aos="zoom-in" data-aos-delay="180"><span class="ic"><i class="fas fa-fire"></i></span>      <div class="sk-name">Firebase</div></div>
+        <div class="sk-card sk-py"     data-aos="zoom-in" data-aos-delay="210"><span class="ic"><i class="fab fa-python"></i></span>    <div class="sk-name">Python</div></div>
+        <div class="sk-card sk-java"   data-aos="zoom-in" data-aos-delay="240"><span class="ic"><i class="fab fa-java"></i></span>     <div class="sk-name">Java</div></div>
+        <div class="sk-card sk-git"    data-aos="zoom-in" data-aos-delay="270"><span class="ic"><i class="fab fa-git-alt"></i></span>  <div class="sk-name">Git</div></div>
+        <div class="sk-card sk-ai"     data-aos="zoom-in" data-aos-delay="300"><span class="ic brand-ic"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg" alt="ChatGPT" loading="lazy"></span><div class="sk-name">ChatGPT</div></div>
+        <div class="sk-card sk-vscode" data-aos="zoom-in" data-aos-delay="330"><span class="ic brand-ic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" loading="lazy"></span><div class="sk-name">VS Code</div></div>
+      </div>
+      <div class="home-skills-cta" data-aos="fade-up">
+        <a href="#skills" data-page="skills" class="btn-ghost"><i class="fa fa-th"></i> View Full Tech Stack</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH MARQUEE -->
+  <div class="marquee-sec">
+    <div class="marquee-track">
+      <div class="marquee-item"><i class="fab fa-html5" style="color:#E44D26"></i>HTML5</div>
+      <div class="marquee-item"><i class="fab fa-css3-alt" style="color:#264DE4"></i>CSS3</div>
+      <div class="marquee-item"><i class="fab fa-js-square" style="color:#F7DF1E"></i>JavaScript</div>
+      <div class="marquee-item"><i class="fab fa-react" style="color:#61DAFB"></i>React</div>
+      <div class="marquee-item"><i class="fas fa-fire" style="color:#FFCA28"></i>Firebase</div>
+      <div class="marquee-item"><i class="fab fa-node-js" style="color:#539E43"></i>Node.js</div>
+      <div class="marquee-item"><i class="fab fa-bootstrap" style="color:#7952B3"></i>Bootstrap</div>
+      <div class="marquee-item"><i class="fab fa-python" style="color:#3776AB"></i>Python</div>
+      <div class="marquee-item"><i class="fab fa-git-alt" style="color:#F05032"></i>Git</div>
+      <div class="marquee-item"><i class="fa fa-database" style="color:#C9A96E"></i>Firestore</div>
+      <div class="marquee-item"><i class="fab fa-java" style="color:#E76F00"></i>Java</div>
+      <div class="marquee-item"><i class="fa fa-mobile-alt" style="color:#3ECFB2"></i>Responsive</div>
+      <!-- Duplicate for seamless loop -->
+      <div class="marquee-item"><i class="fab fa-html5" style="color:#E44D26"></i>HTML5</div>
+      <div class="marquee-item"><i class="fab fa-css3-alt" style="color:#264DE4"></i>CSS3</div>
+      <div class="marquee-item"><i class="fab fa-js-square" style="color:#F7DF1E"></i>JavaScript</div>
+      <div class="marquee-item"><i class="fab fa-react" style="color:#61DAFB"></i>React</div>
+      <div class="marquee-item"><i class="fas fa-fire" style="color:#FFCA28"></i>Firebase</div>
+      <div class="marquee-item"><i class="fab fa-node-js" style="color:#539E43"></i>Node.js</div>
+      <div class="marquee-item"><i class="fab fa-bootstrap" style="color:#7952B3"></i>Bootstrap</div>
+      <div class="marquee-item"><i class="fab fa-python" style="color:#3776AB"></i>Python</div>
+      <div class="marquee-item"><i class="fab fa-git-alt" style="color:#F05032"></i>Git</div>
+      <div class="marquee-item"><i class="fa fa-database" style="color:#C9A96E"></i>Firestore</div>
+      <div class="marquee-item"><i class="fab fa-java" style="color:#E76F00"></i>Java</div>
+      <div class="marquee-item"><i class="fa fa-mobile-alt" style="color:#3ECFB2"></i>Responsive</div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS PREVIEW (Home) -->
+  <section class="home-cert-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">HP LIFE · HP Foundation</span>
+        <h2 class="sec-title">Certifications &amp; <em>Credentials</em></h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">9 certified courses completed via HP LIFE — business, marketing, leadership &amp; technology.</p>
+      </div>
+      <div class="home-cert-grid">
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80" alt="IT for Business" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #1</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">IT for Business Success</h3>
+            <p class="cert-desc">Choosing the best technology and integrating solutions to drive business efficiency and growth.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <!-- REPLACE href below with your real HP LIFE link or keep as-is (already your real verification link) -->
+              <a href="https://life-global.org/certificate/a2c487d9-fc86-4726-a84e-f13a1de3c142" target="_blank" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Data Science" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #2</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Data Science &amp; Analytics</h3>
+            <p class="cert-desc">Data science practices, analytics methodologies, and data-driven business decision making.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <a href="https://life-global.org/certificate/0bc40ac1-9805-4c71-8e9c-a87b06f94591" target="_blank" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80" alt="Success Mindset" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #3</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Success Mindset</h3>
+            <p class="cert-desc">Developing a success mindset, creating vision and goals, and building strong business habits.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <a href="https://life-global.org/certificate/b9b09d12-8259-4960-8d19-632fbbc92d26" target="_blank" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80" alt="Leadership" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #4</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Effective Leadership</h3>
+            <p class="cert-desc">Leadership strategies, ethics in leadership, and how to motivate and guide teams effectively.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <a href="https://life-global.org/certificate/6395839b-fbf1-470d-b7e5-730705e7d681" target="_blank" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="CRM" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #5</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Customer Relationship Management</h3>
+            <p class="cert-desc">Understanding customer needs and buying habits to develop effective CRM strategies for business.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <a href="https://life-global.org/certificate/183101df-23dd-415a-b02f-9951640fbfa4" target="_blank" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80" alt="Networking" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #6</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Professional Networking</h3>
+            <p class="cert-desc">Networking strategies for career growth, personal branding and digital tools for professional connections.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <a href="https://life-global.org/certificate/ef1c4b6e-9f6f-4198-904c-dde47d70c652" target="_blank" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="Business Models" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #7</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Business Models &amp; Characteristics</h3>
+            <p class="cert-desc">Digital, omni-channel and traditional business model characteristics, payments, and customer support strategies.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <!-- TODO: Replace href="#cert-7" with your real HP LIFE link for this certificate -->
+              <a href="#cert-7" class="cert-verify" style="opacity:.6;pointer-events:none;"><i class="fa fa-link"></i>Add Link</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="Effective Business Websites" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #8</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Effective Business Websites</h3>
+            <p class="cert-desc">Best-practice development to design effective business websites, understanding customer behaviour and website metrics.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <div style="display:flex;gap:.5rem;align-items:center;">
+                <a href="https://life-global.org/certificate/8c26e54f-7ad8-4800-91a8-8ed4b73e6b91" target="_blank" rel="noopener" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+                <a href="./Effective_Business_Websites.pdf" target="_blank" class="cert-pdf-btn"><i class="fa fa-file-pdf"></i>PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="cert-img">
+            <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=600&q=80" alt="Social Media Marketing" loading="lazy">
+            <div class="cert-overlay"></div>
+            <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+            <span class="cert-num-tag">Cert #9</span>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation · June 2026</div>
+            <h3 class="cert-title">Social Media Marketing</h3>
+            <p class="cert-desc">Using advertising across social platforms, creating effective social media campaigns, and building targeted social adverts.</p>
+            <div class="cert-footer">
+              <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+              <div style="display:flex;gap:.5rem;align-items:center;">
+                <a href="https://life-global.org/certificate/efe7c140-e26c-407c-8b94-71ec55b28c2e" target="_blank" rel="noopener" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+                <a href="./Social_Media_Marketing.pdf" target="_blank" class="cert-pdf-btn"><i class="fa fa-file-pdf"></i>PDF</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="home-cert-cta" data-aos="fade-up">
+        <a href="#certifications" data-page="certifications" class="btn-ghost"><i class="fa fa-certificate"></i> View All 9 Certifications</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-sec">
+    <div class="inner">
+      <div class="cta-banner" data-aos="zoom-in">
+        <div class="cta-badge"><i class="fa fa-circle" style="font-size:.5rem;color:var(--teal)"></i> Sril Connect · Open for Projects</div>
+        <h2 class="cta-title">Ready to Build Something <em>Outstanding?</em></h2>
+        <p class="cta-sub">Let's discuss your idea and Sril Connect will build a digital product your customers will love.</p>
+        <div class="cta-btns">
+          <a href="#contact" data-page="contact" class="btn-primary"><i class="fa fa-paper-plane"></i> Start a Project</a>
+          <a href="#work"    data-page="work"    class="btn-ghost"><i class="fa fa-eye"></i> View My Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- PAGE: WORK -->
+<div class="page" id="pg-work">
+<section id="work">
+  <div class="sec-head inner" data-aos="fade-up">
+    <span class="sec-kicker">Selected Work</span>
+    <h2 class="sec-title">Recent Projects</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-sub">Real-world projects designed and built by Sril Connect for clients across various industries.</p>
+  </div>
+  <div class="inner">
+    <div class="proj-grid">
+
+      <div class="proj-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="proj-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Best Tailor Shop" class="proj-img" loading="lazy">
+          <div class="proj-shade"></div>
+          <span class="proj-chip">Web App</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Best Tailor Shop</h3>
+          <p class="proj-desc">Full-featured tailor shop app with appointment booking, measurements tracking, and order management.</p>
+          <div class="proj-tags"><span class="chip">HTML/CSS/JS</span><span class="chip">Firebase</span><span class="chip">Web App</span></div>
+          <span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span>
+        </div>
+      </div>
+
+      <div class="proj-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="proj-img-wrap">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Comfort Healthcare" class="proj-img" loading="lazy">
+          <div class="proj-shade"></div>
+          <span class="proj-chip">Website</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Comfort Healthcare</h3>
+          <p class="proj-desc">Professional healthcare website with service listings, doctor profiles, and appointment interface.</p>
+          <div class="proj-tags"><span class="chip">HTML</span><span class="chip">CSS/JS</span><span class="chip">Firebase</span></div>
+          <span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span>
+        </div>
+      </div>
+
+      <div class="proj-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="proj-img-wrap">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&q=80" alt="Deepam Tailors" class="proj-img" loading="lazy">
+          <div class="proj-shade"></div>
+          <span class="proj-chip">Web App &amp; Site</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Deepam Women's Tailor</h3>
+          <p class="proj-desc">Combined web application and marketing site for a women's tailoring business with online catalogue.</p>
+          <div class="proj-tags"><span class="chip">HTML/CSS/JS</span><span class="chip">Firebase</span><span class="chip">Bootstrap</span></div>
+          <span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span>
+        </div>
+      </div>
+
+      <div class="proj-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="proj-img-wrap">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Mayil Beauty" class="proj-img" loading="lazy">
+          <div class="proj-shade"></div>
+          <span class="proj-chip">Website</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Mayil Beauty Parlour</h3>
+          <p class="proj-desc">Elegant parlour website with service menu, gallery, and appointment booking with premium visual identity.</p>
+          <div class="proj-tags"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JS</span></div>
+          <span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span>
+        </div>
+      </div>
+
+      <div class="proj-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="proj-img-wrap">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Diabetic Clinic" class="proj-img" loading="lazy">
+          <div class="proj-shade"></div>
+          <span class="proj-chip">Web App</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Senthil Diabetic Clinic</h3>
+          <p class="proj-desc">Medical web app for a diabetic clinic with patient management, scheduling, and health records.</p>
+          <div class="proj-tags"><span class="chip">HTML/CSS</span><span class="chip">JS/React</span><span class="chip">Firebase</span><span class="chip">Web App</span></div>
+          <span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span>
+        </div>
+      </div>
+
+      <div class="proj-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="proj-img-wrap">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&q=80" alt="Coding Hub" class="proj-img" loading="lazy">
+          <div class="proj-shade"></div>
+          <span class="proj-chip">Full Stack</span>
+        </div>
+        <div class="proj-body">
+          <h3 class="proj-title">Coding Practice Platform</h3>
+          <p class="proj-desc">Full-stack platform for learners to practice coding problems, follow tutorials, and track progress.</p>
+          <div class="proj-tags"><span class="chip">HTML/CSS/JS</span><span class="chip">FireBase</span><span class="chip">Razorpay</span></div>
+          <span class="proj-conf"><i class="fa fa-lock"></i> Confidential Project</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- MY BUILD PROCESS -->
+  <section class="process-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">How It Works</span>
+        <h2 class="sec-title">My Build Process</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">A transparent, structured approach from first chat to final launch.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+          <div class="process-step-num">01</div>
+          <div class="process-step-icon"><i class="fa fa-comments"></i></div>
+          <h3 class="process-step-title">Discover</h3>
+          <p class="process-step-desc">We discuss your goals, audience, and requirements to fully understand what needs to be built and why.</p>
+          <span class="process-arrow"><i class="fa fa-chevron-right"></i></span>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="80">
+          <div class="process-step-num">02</div>
+          <div class="process-step-icon"><i class="fa fa-drafting-compass"></i></div>
+          <h3 class="process-step-title">Design</h3>
+          <p class="process-step-desc">I plan the UI layout, user flow, and visual identity — creating a structure that looks great and works logically.</p>
+          <span class="process-arrow"><i class="fa fa-chevron-right"></i></span>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="160">
+          <div class="process-step-num">03</div>
+          <div class="process-step-icon"><i class="fa fa-code"></i></div>
+          <h3 class="process-step-title">Develop</h3>
+          <p class="process-step-desc">Clean, responsive code with regular updates and reviews so you're always in the loop during development.</p>
+          <span class="process-arrow"><i class="fa fa-chevron-right"></i></span>
+        </div>
+        <div class="process-step" data-aos="fade-up" data-aos-delay="240">
+          <div class="process-step-num">04</div>
+          <div class="process-step-icon"><i class="fa fa-rocket"></i></div>
+          <h3 class="process-step-title">Deploy</h3>
+          <p class="process-step-desc">Launch with full testing, performance optimisation, and post-delivery support to keep everything running smoothly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- PAGE: SERVICES -->
+<div class="page" id="pg-services">
+<section id="services">
+  <div class="sec-head inner" data-aos="fade-up">
+    <span class="sec-kicker">What I Offer</span>
+    <h2 class="sec-title">Services</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-sub">End-to-end web development tailored to your goals and audience.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card svc-web" data-aos="fade-up" data-aos-delay="0">
+      <div class="svc-icon"><i class="fa fa-globe"></i></div>
+      <h3 class="svc-title">Website Development</h3>
+      <p class="svc-desc">Responsive business websites that build trust, explain your services clearly, and bring enquiries online.</p>
+    </div>
+    <div class="svc-card svc-app" data-aos="fade-up" data-aos-delay="80">
+      <div class="svc-icon"><i class="fa fa-laptop-code"></i></div>
+      <h3 class="svc-title">Web App Development</h3>
+      <p class="svc-desc">Custom web apps with dashboards, booking flows, authentication, databases, and useful automation.</p>
+    </div>
+    <div class="svc-card svc-digital" data-aos="fade-up" data-aos-delay="160">
+      <div class="svc-icon"><i class="fa fa-chart-line"></i></div>
+      <h3 class="svc-title">Business Digitalization</h3>
+      <p class="svc-desc">Move manual business work into simple digital systems for orders, records, customers, and daily operations.</p>
+    </div>
+    <div class="svc-card svc-ideas" data-aos="fade-up" data-aos-delay="240">
+      <div class="svc-icon"><i class="fa fa-lightbulb"></i></div>
+      <h3 class="svc-title">Tech Ideas for Business</h3>
+      <p class="svc-desc">Practical technology ideas to improve sales, save time, and create better customer experiences.</p>
+    </div>
+    <!-- <div class="svc-card svc-redesign" data-aos="fade-up" data-aos-delay="320">
+      <div class="svc-icon"><i class="fa fa-pen-ruler"></i></div>
+      <h3 class="svc-title">Website Redesign</h3>
+      <p class="svc-desc">Upgrade old websites with a cleaner design, better mobile layout, faster loading, and stronger content flow.</p>
+    </div> -->
+  </div>
+</section>
+
+  <!-- HOW I WORK -->
+  <section class="hiw-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">My Workflow</span>
+        <h2 class="sec-title">How I Work</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Simple, transparent steps from idea to live product.</p>
+      </div>
+      <div class="hiw-grid" data-aos="fade-up">
+        <div class="hiw-step">
+          <div class="hiw-step-n">01</div>
+          <div class="hiw-step-icon"><i class="fa fa-handshake"></i></div>
+          <h3 class="hiw-step-title">Consultation</h3>
+          <p class="hiw-step-desc">Free discussion to understand your project, goals, timeline, and budget — no commitment required.</p>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-step-n">02</div>
+          <div class="hiw-step-icon"><i class="fa fa-file-alt"></i></div>
+          <h3 class="hiw-step-title">Proposal</h3>
+          <p class="hiw-step-desc">A clear project plan with scope, timeline, cost, and deliverables so you know exactly what to expect.</p>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-step-n">03</div>
+          <div class="hiw-step-icon"><i class="fa fa-laptop-code"></i></div>
+          <h3 class="hiw-step-title">Build &amp; Review</h3>
+          <p class="hiw-step-desc">Development with regular previews and feedback rounds, keeping you involved at every stage.</p>
+        </div>
+        <div class="hiw-step">
+          <div class="hiw-step-n">04</div>
+          <div class="hiw-step-icon"><i class="fa fa-check-double"></i></div>
+          <h3 class="hiw-step-title">Launch &amp; Support</h3>
+          <p class="hiw-step-desc">Final testing, deployment, and ongoing support to ensure your product performs flawlessly after launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">Investment</span>
+        <h2 class="sec-title">Simple Pricing</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Transparent packages to get started — custom-quoted after our free consultation.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="price-tier">Starter</span>
+          <div class="price-val"><sup>₹</sup>8K<span> onwards</span></div>
+          <p class="price-note">Simple website for small businesses, landing pages, and personal brands.</p>
+          <ul class="price-features">
+            <li><i class="fa fa-check"></i>Up to 5 responsive pages</li>
+            <li><i class="fa fa-check"></i>WhatsApp &amp; Maps integration</li>
+            <li><i class="fa fa-check"></i>Contact form &amp; animations</li>
+            <li><i class="fa fa-check"></i>Basic SEO setup</li>
+            <li class="off"><i class="fa fa-times"></i>Backend / database</li>
+            <li class="off"><i class="fa fa-times"></i>User authentication</li>
+          </ul>
+          <button class="price-btn outline" onclick="navigateTo('contact')">Get Started</button>
+        </div>
+        <div class="price-card feat" data-aos="fade-up" data-aos-delay="100">
+          <div class="price-badge">Most Popular</div>
+          <span class="price-tier">Professional</span>
+          <div class="price-val"><sup>₹</sup>20K<span> onwards</span></div>
+          <p class="price-note">Full web app for businesses needing bookings, dashboards, or data management.</p>
+          <ul class="price-features">
+            <li><i class="fa fa-check"></i>Unlimited pages</li>
+            <li><i class="fa fa-check"></i>Firebase backend &amp; real-time DB</li>
+            <li><i class="fa fa-check"></i>User authentication</li>
+            <li><i class="fa fa-check"></i>Admin dashboard</li>
+            <li><i class="fa fa-check"></i>Payment integration</li>
+            <li><i class="fa fa-check"></i>30-day post-launch support</li>
+          </ul>
+          <button class="price-btn solid" onclick="navigateTo('contact')">Start Project</button>
+        </div>
+        <div class="price-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="price-tier">Enterprise</span>
+          <div class="price-val" style="font-size:2rem;letter-spacing:.03em;">Custom</div>
+          <p class="price-note">Large-scale apps with complex features, multi-role systems, and ongoing maintenance.</p>
+          <ul class="price-features">
+            <li><i class="fa fa-check"></i>Everything in Professional</li>
+            <li><i class="fa fa-check"></i>Multi-role user system</li>
+            <li><i class="fa fa-check"></i>React / Next.js architecture</li>
+            <li><i class="fa fa-check"></i>Advanced analytics</li>
+            <li><i class="fa fa-check"></i>Third-party API integrations</li>
+            <li><i class="fa fa-check"></i>Priority &amp; ongoing support</li>
+          </ul>
+          <button class="price-btn outline" onclick="navigateTo('contact')">Request Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- PAGE: SKILLS -->
+<div class="page" id="pg-skills">
+<section id="skills">
+  <div class="sec-head inner" data-aos="fade-up">
+    <span class="sec-kicker">Technical Expertise</span>
+    <h2 class="sec-title">Skills &amp; Tools</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-sub">Technologies I work with daily to build modern digital products.</p>
+  </div>
+  <div class="skills-wrap inner">
+    <div class="skill-icons-grid" data-aos="fade-right">
+      <div class="sk-card sk-html"   data-aos="zoom-in" data-aos-delay="0">  <span class="ic"><i class="fab fa-html5"></i></span>    <div class="sk-name">HTML5</div></div>
+      <div class="sk-card sk-css"    data-aos="zoom-in" data-aos-delay="40"> <span class="ic"><i class="fab fa-css3-alt"></i></span>  <div class="sk-name">CSS3</div></div>
+      <div class="sk-card sk-js"     data-aos="zoom-in" data-aos-delay="80"> <span class="ic"><i class="fab fa-js-square"></i></span> <div class="sk-name">JS</div></div>
+      <div class="sk-card sk-react"  data-aos="zoom-in" data-aos-delay="120"><span class="ic"><i class="fab fa-react"></i></span>     <div class="sk-name">React</div></div>
+      <div class="sk-card sk-node"   data-aos="zoom-in" data-aos-delay="160"><span class="ic"><i class="fab fa-node-js"></i></span>   <div class="sk-name">Node.js</div></div>
+      <div class="sk-card sk-boot"   data-aos="zoom-in" data-aos-delay="200"><span class="ic"><i class="fab fa-bootstrap"></i></span> <div class="sk-name">Bootstrap</div></div>
+      <div class="sk-card sk-fb"     data-aos="zoom-in" data-aos-delay="240"><span class="ic"><i class="fas fa-fire"></i></span>      <div class="sk-name">Firebase</div></div>
+      <div class="sk-card sk-py"     data-aos="zoom-in" data-aos-delay="280"><span class="ic"><i class="fab fa-python"></i></span>    <div class="sk-name">Python</div></div>
+      <div class="sk-card sk-java"   data-aos="zoom-in" data-aos-delay="320"><span class="ic"><i class="fab fa-java"></i></span>     <div class="sk-name">Java</div></div>
+      <div class="sk-card sk-git"    data-aos="zoom-in" data-aos-delay="360"><span class="ic"><i class="fab fa-git-alt"></i></span>  <div class="sk-name">Git</div></div>
+      <div class="sk-card sk-web"    data-aos="zoom-in" data-aos-delay="400"><span class="ic"><i class="fas fa-code"></i></span>     <div class="sk-name">Web Dev</div></div>
+      <div class="sk-card sk-app"    data-aos="zoom-in" data-aos-delay="440"><span class="ic"><i class="fas fa-layer-group"></i></span><div class="sk-name">App Dev</div></div>
+      <div class="sk-card sk-ai"     data-aos="zoom-in" data-aos-delay="480"><span class="ic brand-ic"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg" alt="ChatGPT"></span><div class="sk-name">ChatGPT</div></div>
+      <div class="sk-card sk-claude" data-aos="zoom-in" data-aos-delay="520"><span class="ic brand-ic"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/claude-color.svg" alt="Claude"></span><div class="sk-name">Claude</div></div>
+      <div class="sk-card sk-ag"     data-aos="zoom-in" data-aos-delay="560"><span class="ic brand-ic"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/antigravity-color.svg" alt="Antigravity"></span><div class="sk-name">Antigravity</div></div>
+      <div class="sk-card sk-vscode" data-aos="zoom-in" data-aos-delay="600"><span class="ic brand-ic"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"></span><div class="sk-name">VS Code</div></div>
+    </div>
+  </div>
+</section>
+
+  <!-- JOURNEY TIMELINE -->
+  <section class="timeline-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">My Story</span>
+        <h2 class="sec-title">Professional <em>Journey</em></h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Key milestones that shaped my skills and freelance career.</p>
+      </div>
+      <div class="timeline-wrap">
+        <div class="tl-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="tl-dot"><i class="fa fa-graduation-cap"></i></div>
+          <div class="tl-body">
+            <span class="tl-year">2021</span>
+            <h3 class="tl-title">Started Web Development</h3>
+            <div class="tl-sub">Self-taught — HTML, CSS, JavaScript</div>
+            <p class="tl-desc">Began the journey by building small static websites and learning the fundamentals of front-end development through projects and online resources.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-aos="fade-up" data-aos-delay="80">
+          <div class="tl-dot"><i class="fa fa-briefcase"></i></div>
+          <div class="tl-body">
+            <span class="tl-year">2022</span>
+            <h3 class="tl-title">First Freelance Project</h3>
+            <div class="tl-sub">Client website — HTML / CSS / JS</div>
+            <p class="tl-desc">Delivered the first paid client project — a responsive business website. Learnt the importance of client communication, deadlines, and feedback cycles.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-aos="fade-up" data-aos-delay="160">
+          <div class="tl-dot"><i class="fa fa-fire"></i></div>
+          <div class="tl-body">
+            <span class="tl-year">2023</span>
+            <h3 class="tl-title">React &amp; Firebase Mastery</h3>
+            <div class="tl-sub">Full-stack web app development</div>
+            <p class="tl-desc">Levelled up with React and Firebase — building dynamic web apps with real-time databases, user authentication, and admin dashboards for clients.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-aos="fade-up" data-aos-delay="240">
+          <div class="tl-dot"><i class="fa fa-users"></i></div>
+          <div class="tl-body">
+            <span class="tl-year">2024</span>
+            <h3 class="tl-title">Growing Client Base</h3>
+            <div class="tl-sub">Healthcare · Retail · Education · Beauty</div>
+            <p class="tl-desc">Expanded across multiple industries — tailoring shops, healthcare clinics, beauty parlours, and e-learning platforms — delivering 270+ successful projects.</p>
+          </div>
+        </div>
+        <div class="tl-item" data-aos="fade-up" data-aos-delay="320">
+          <div class="tl-dot"><i class="fa fa-rocket"></i></div>
+          <div class="tl-body">
+            <span class="tl-year">2025 — Now</span>
+            <h3 class="tl-title">Sril Connect — Digital Agency Founded</h3>
+            <div class="tl-sub">Sril Connect · Websites · Web Apps · Digitalisation</div>
+            <p class="tl-desc">Founded Sril Connect as a full-service digital agency — offering end-to-end solutions from discovery and design through development, launch, and ongoing client support.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- PAGE: TESTIMONIALS -->
+<div class="page" id="pg-testimonials">
+<section id="testimonials">
+  <div class="sec-head inner" data-aos="fade-up">
+    <span class="sec-kicker">Client Feedback</span>
+    <h2 class="sec-title">Testimonials</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-sub">What Sril Connect clients say about working together.</p>
+  </div>
+
+  <!-- ACHIEVEMENT STATS BAR -->
+  <div class="stats-bar-wrap inner" data-aos="fade-up">
+    <div class="stats-bar">
+      <div class="sb-item"><div class="sb-val">270<em>+</em></div><div class="sb-lbl">Projects Delivered</div></div>
+      <div class="sb-item"><div class="sb-val">5<em>★</em></div><div class="sb-lbl">Average Rating</div></div>
+      <div class="sb-item"><div class="sb-val">100<em>%</em></div><div class="sb-lbl">Satisfaction Rate</div></div>
+      <div class="sb-item"><div class="sb-val">₹0</div><div class="sb-lbl">Hidden Charges</div></div>
+    </div>
+  </div>
+
+  <div class="swiper" data-aos="fade-up">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="tcard">
+          <div class="tstars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+          <p class="ttext">"Anil built an incredible web app for our tailor shop. The booking system works flawlessly and our customers love how easy it is to use. He delivered exactly what we needed, on time."</p>
+          <div class="tauthor"><div class="tav">BT</div><div><div class="tname">Best Tailor Shop</div><div class="trole">Client Review</div></div></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="tcard">
+          <div class="tstars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+          <p class="ttext">"Our healthcare website looks completely professional now. Patients frequently compliment how easy it is to find information and book appointments. Anil was responsive and delivered excellent quality."</p>
+          <div class="tauthor"><div class="tav">CH</div><div><div class="tname">Comfort Healthcare</div><div class="trole">Client Review</div></div></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="tcard">
+          <div class="tstars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+          <p class="ttext">"Our web application transformed how we manage orders and customers. The design is elegant, the features are exactly what we needed, and Anil guided us through every step. Highly recommend him."</p>
+          <div class="tauthor"><div class="tav">DT</div><div><div class="tname">Deepam Women's Tailor</div><div class="trole">Client Review</div></div></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="tcard">
+          <div class="tstars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-alt"></i></div>
+          <p class="ttext">"The website perfectly captures our brand identity. It's beautiful, loads fast, and has brought us new customers who found us online. The investment was absolutely worth every rupee."</p>
+          <div class="tauthor"><div class="tav">MB</div><div><div class="tname">Mayil Beauty Parlour</div><div class="trole">Client Review</div></div></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="tcard">
+          <div class="tstars"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+          <p class="ttext">"The Coding Hub platform is exactly what our students needed. Clean, intuitive, and the full-stack architecture is solid. Anil is one of the most dedicated developers I've worked with."</p>
+          <div class="tauthor"><div class="tav">MH</div><div><div class="tname">MCoding Hub</div><div class="trole">Client Review</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+</div>
+
+<!-- PAGE: CONTACT -->
+<div class="page" id="pg-contact">
+<section id="contact">
+  <div class="sec-head inner" data-aos="fade-up">
+    <span class="sec-kicker">Get In Touch</span>
+    <h2 class="sec-title">Let's Work Together</h2>
+    <div class="sec-rule"></div>
+    <p class="sec-sub">Have a project in mind? Let's create something outstanding together.</p>
+  </div>
+  <div class="contact-grid inner">
+    <div class="cinfo" data-aos="fade-right">
+      <p class="cinfo-intro">"Great products start with a conversation. Reach out and let Sril Connect build your vision."</p>
+      <a href="mailto:sriltechh@gmail.com" class="ccard email">
+        <div class="ccard-icon"><i class="fa fa-envelope"></i></div>
+        <div><div class="ccard-lbl">Email</div><div class="ccard-val">sriltechh@gmail.com</div></div>
+      </a>
+      <a href="tel:7799086877" class="ccard">
+        <div class="ccard-icon"><i class="fa fa-phone"></i></div>
+        <div><div class="ccard-lbl">Phone</div><div class="ccard-val">+91 77990 86877</div></div>
+      </a>
+      <a href="https://wa.me/917799086877" target="_blank" class="ccard whatsapp">
+        <div class="ccard-icon"><i class="fab fa-whatsapp"></i></div>
+        <div><div class="ccard-lbl">WhatsApp</div><div class="ccard-val">+91 77990 86877</div></div>
+      </a>
+      <div class="socials">
+        <a href="https://github.com/aniljakkula"               target="_blank" class="soc github"   title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/anil-jakkula"     target="_blank" class="soc linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:sriltechh@gmail.com"                             class="soc mail"     title="Email"><i class="fa fa-envelope"></i></a>
+        <a href="https://wa.me/917799086877"                   target="_blank" class="soc whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="cform" data-aos="fade-left">
+      <div id="fmain">
+        <h3 class="cform-title">Send a Message</h3>
+        <p class="cform-sub">I'll respond within 24 hours.</p>
+        <div class="fg-row">
+          <div class="fg"><label>Name</label><input type="text"  id="fn" placeholder="Your full name"></div>
+          <div class="fg"><label>Email</label><input type="email" id="fe" placeholder="your@email.com"></div>
+        </div>
+        <div class="fg"><label>Subject</label><input type="text" id="fs" placeholder="Project inquiry"></div>
+        <div class="fg"><label>Message</label><textarea id="fm" placeholder="Tell me about your project…"></textarea></div>
+        <button class="btn-send" onclick="sendForm()"><i class="fa fa-paper-plane"></i> Send Message</button>
+      </div>
+      <div class="fsuccess" id="fsuc">
+        <i class="fa fa-check-circle"></i>
+        <h3>Message Sent!</h3>
+        <p>Thank you for reaching out. I'll be in touch within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- FAQ -->
+  <section class="faq-sec">
+    <div class="inner">
+      <div class="sec-head" data-aos="fade-up">
+        <span class="sec-kicker">Common Questions</span>
+        <h2 class="sec-title">FAQ</h2>
+        <div class="sec-rule"></div>
+        <p class="sec-sub">Everything you might want to know before we start working together.</p>
+      </div>
+      <div class="faq-grid" data-aos="fade-up">
+        <div class="faq-item">
+          <div class="faq-q"><span>How long does a typical project take?</span><i class="fa fa-plus"></i></div>
+          <div class="faq-a"><p>A simple website usually takes 1–2 weeks. A full web application with a database and dashboard takes 3–6 weeks depending on complexity. I'll give you a realistic timeline before we begin.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>What information do you need to start?</span><i class="fa fa-plus"></i></div>
+          <div class="faq-a"><p>Just your business name, what you do, who your customers are, and what you'd like the website or app to achieve. I'll guide you through the rest — no technical knowledge required.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Do you offer revisions?</span><i class="fa fa-plus"></i></div>
+          <div class="faq-a"><p>Yes — every project includes revision rounds so you can request changes before the final delivery. I want you to be genuinely happy with the result, not just satisfied.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Will my website work on mobile?</span><i class="fa fa-plus"></i></div>
+          <div class="faq-a"><p>Absolutely. Every site and app I build is fully responsive and tested across phones, tablets, and desktops. Mobile-first design is a core part of my development process.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>What payment methods do you accept?</span><i class="fa fa-plus"></i></div>
+          <div class="faq-a"><p>I accept UPI, bank transfer (NEFT/IMPS), and Razorpay. Payment is typically split: 50% upfront to begin and 50% on delivery. Flexible arrangements are possible for larger projects.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q"><span>Do you provide support after launch?</span><i class="fa fa-plus"></i></div>
+          <div class="faq-a"><p>Yes — all projects include a free support period after launch. Ongoing maintenance, updates, and new features are available as needed, billed separately or as a monthly retainer.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- PAGE: CERTIFICATIONS -->
+<div class="page" id="pg-certifications">
+<section class="cert-sec" id="certifications">
+  <div class="sec-head inner" data-aos="fade-up">
+    <span class="sec-kicker">HP LIFE · HP Foundation</span>
+    <h2 class="sec-title">My <em>Certifications</em></h2>
+    <div class="sec-rule"></div>
+    <p class="sec-sub">9 courses completed — business, marketing, leadership, technology &amp; data.</p>
+  </div>
+
+  <!-- Stats bar -->
+  <div class="cert-intro-stats inner" data-aos="fade-up">
+    <div class="cis-item"><div class="cis-val">9</div><div class="cis-lbl">Certificates</div></div>
+    <div class="cis-item"><div class="cis-val">HP</div><div class="cis-lbl">LIFE Foundation</div></div>
+    <div class="cis-item"><div class="cis-val">2026</div><div class="cis-lbl">Year Issued</div></div>
+  </div>
+
+  <!-- All 7 cards -->
+  <div class="cert-grid inner">
+
+    <!-- CERT 1 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=700&q=80" alt="IT for Business" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">01 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">IT for Business Success</h3>
+        <p class="cert-desc">Choosing the best technology for business, integrating technology solutions, and driving efficiency through smart IT decisions.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <a href="https://life-global.org/certificate/a2c487d9-fc86-4726-a84e-f13a1de3c142"
+             target="_blank" rel="noopener" class="cert-verify">
+            <i class="fa fa-external-link-alt"></i>Verify
+          </a>
+        </div>
+        <div class="cert-serial">ID: a2c487d9-fc86-4726-a84e-f13a1de3c142</div>
+      </div>
+    </div>
+
+    <!-- CERT 2 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=80" alt="Data Science" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">02 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">Data Science &amp; Analytics</h3>
+        <p class="cert-desc">Leading data science practices, analytics methodologies, tools, data-driven business approach, and essential skills to pursue a career in the field.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <a href="https://life-global.org/certificate/0bc40ac1-9805-4c71-8e9c-a87b06f94591"
+             target="_blank" rel="noopener" class="cert-verify">
+            <i class="fa fa-external-link-alt"></i>Verify
+          </a>
+        </div>
+        <div class="cert-serial">ID: 0bc40ac1-9805-4c71-8e9c-a87b06f94591</div>
+      </div>
+    </div>
+
+    <!-- CERT 3 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80" alt="Success Mindset" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">03 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">Success Mindset</h3>
+        <p class="cert-desc">Developing a success mindset, creating a vision, setting goals and a success plan, and building good business habits for a successful future.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <a href="https://life-global.org/certificate/b9b09d12-8259-4960-8d19-632fbbc92d26"
+             target="_blank" rel="noopener" class="cert-verify">
+            <i class="fa fa-external-link-alt"></i>Verify
+          </a>
+        </div>
+        <div class="cert-serial">ID: b9b09d12-8259-4960-8d19-632fbbc92d26</div>
+      </div>
+    </div>
+
+    <!-- CERT 4 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=700&q=80" alt="Leadership" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">04 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">Effective Leadership</h3>
+        <p class="cert-desc">Understanding effective leadership and its importance, leveraging different leadership strategies, and why ethics plays a critical role in leadership.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <a href="https://life-global.org/certificate/6395839b-fbf1-470d-b7e5-730705e7d681"
+             target="_blank" rel="noopener" class="cert-verify">
+            <i class="fa fa-external-link-alt"></i>Verify
+          </a>
+        </div>
+        <div class="cert-serial">ID: 6395839b-fbf1-470d-b7e5-730705e7d681</div>
+      </div>
+    </div>
+
+    <!-- CERT 5 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=700&q=80" alt="CRM" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">05 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">Customer Relationship Management</h3>
+        <p class="cert-desc">Understanding existing customers and their needs, customer buying habits, and developing a CRM strategy for business.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <a href="https://life-global.org/certificate/183101df-23dd-415a-b02f-9951640fbfa4"
+             target="_blank" rel="noopener" class="cert-verify">
+            <i class="fa fa-external-link-alt"></i>Verify
+          </a>
+        </div>
+        <div class="cert-serial">ID: 183101df-23dd-415a-b02f-9951640fbfa4</div>
+      </div>
+    </div>
+
+    <!-- CERT 6 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&q=80" alt="Networking" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">06 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">Professional Networking for Career Growth</h3>
+        <p class="cert-desc">Networking importance for career growth, practical networking strategies, personal branding, and digital tools to grow a professional network.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <a href="https://life-global.org/certificate/ef1c4b6e-9f6f-4198-904c-dde47d70c652"
+             target="_blank" rel="noopener" class="cert-verify">
+            <i class="fa fa-external-link-alt"></i>Verify
+          </a>
+        </div>
+        <div class="cert-serial">ID: ef1c4b6e-9f6f-4198-904c-dde47d70c652</div>
+      </div>
+    </div>
+
+    <!-- CERT 7 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=700&q=80" alt="Business Models" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">07 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Course Material</div>
+        <h3 class="cert-title">Business Models &amp; Characteristics</h3>
+        <p class="cert-desc">Digital, omni-channel, and traditional business model characteristics — presence, inventory, customer base, marketing, payments, and analytics.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 2026</span>
+          <!--
+            ══════════════════════════════════════════════
+            HOW TO ADD YOUR LINK FOR CERT 7:
+            1. Open your HP LIFE account at life-global.org
+            2. Go to My Learning → Completed Courses
+            3. Find "Business Models and their Characteristics"
+            4. Click "View Certificate" → copy the URL
+            5. Replace href="#cert-7" below with that URL
+            6. Remove style="opacity:.6;pointer-events:none;"
+            ══════════════════════════════════════════════
+          -->
+          <a href="#cert-7" class="cert-verify"
+             style="opacity:.55;pointer-events:none;cursor:default;">
+            <i class="fa fa-link"></i>Add Link
+          </a>
+        </div>
+        <div class="cert-serial">ID: — (see HP LIFE account for serial)</div>
+      </div>
+    </div>
+
+    <!-- CERT 8 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80" alt="Effective Business Websites" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">08 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">Effective Business Websites</h3>
+        <p class="cert-desc">Best-practice development techniques to design a business website, understanding customer behaviour, and using website metrics effectively.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;">
+            <a href="https://life-global.org/certificate/8c26e54f-7ad8-4800-91a8-8ed4b73e6b91" target="_blank" rel="noopener" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            <a href="./Effective_Business_Websites.pdf" target="_blank" class="cert-pdf-btn"><i class="fa fa-file-pdf"></i>PDF</a>
+          </div>
+        </div>
+        <div class="cert-serial">ID: 8c26e54f-7ad8-4800-91a8-8ed4b73e6b91</div>
+      </div>
+    </div>
+
+    <!-- CERT 9 -->
+    <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+      <div class="cert-img">
+        <img src="https://images.unsplash.com/photo-1611926653458-09294b3142bf?w=700&q=80" alt="Social Media Marketing" loading="lazy">
+        <div class="cert-overlay"></div>
+        <span class="cert-hp-badge"><i class="fa fa-certificate"></i>HP LIFE</span>
+        <span class="cert-num-tag">09 / 09</span>
+      </div>
+      <div class="cert-body">
+        <div class="cert-issuer"><i class="fa fa-building"></i>HP Foundation &nbsp;·&nbsp; Certificate of Completion</div>
+        <h3 class="cert-title">Social Media Marketing</h3>
+        <p class="cert-desc">Using advertising successfully across social platforms, creating effective social media marketing campaigns, and building targeted social media adverts.</p>
+        <div class="cert-footer">
+          <span class="cert-date"><i class="fa fa-calendar-alt"></i>June 21, 2026</span>
+          <div style="display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;">
+            <a href="https://life-global.org/certificate/efe7c140-e26c-407c-8b94-71ec55b28c2e" target="_blank" rel="noopener" class="cert-verify"><i class="fa fa-external-link-alt"></i>Verify</a>
+            <a href="./Social_Media_Marketing.pdf" target="_blank" class="cert-pdf-btn"><i class="fa fa-file-pdf"></i>PDF</a>
+          </div>
+        </div>
+        <div class="cert-serial">ID: efe7c140-e26c-407c-8b94-71ec55b28c2e</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<!-- ═══════════════════ END PAGES ═══════════════════ -->
+
+<!-- BOTTOM NAV -->
+<div class="bottom-nav" id="bottomNav">
+  <!-- Left: Pages popup -->
+  <div class="bn-section">
+    <button class="bn-btn" id="bnPagesBtn" aria-label="All pages" aria-expanded="false">
+      <i class="fa fa-th-large"></i>
+      <span>Pages</span>
+    </button>
+    <div class="bn-popup" id="bnPopup">
+      <button class="bn-plink" data-page="home">          <i class="fa fa-home"></i>         Home</button>
+      <button class="bn-plink" data-page="profile">       <i class="fa fa-user"></i>         Profile</button>
+      <button class="bn-plink" data-page="work">          <i class="fa fa-briefcase"></i>    Work</button>
+      <button class="bn-plink" data-page="services">      <i class="fa fa-globe"></i>        Services</button>
+      <button class="bn-plink" data-page="skills">        <i class="fa fa-code"></i>         Skills</button>
+      <button class="bn-plink" data-page="certifications"><i class="fa fa-certificate"></i>  Certifications</button>
+      <button class="bn-plink" data-page="testimonials">  <i class="fa fa-star"></i>         Reviews</button>
+    </div>
+  </div>
+  <div class="bn-divider"></div>
+  <!-- Middle: Skills & Tools -->
+  <button class="bn-btn bn-mid" id="bnSkillsBtn" aria-label="Skills and Tools">
+    <i class="fa fa-laptop-code"></i>
+    <span>Skills</span>
+  </button>
+  <div class="bn-divider"></div>
+  <!-- Right: Contact / Hire Me -->
+  <button class="bn-btn bn-right" id="bnContactBtn" aria-label="Contact">
+    <i class="fa fa-paper-plane"></i>
+    <span>Hire Me</span>
+  </button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-logo">Sril<em>Connect</em></div>
+    <p class="ft-copy">&copy; 2026 Sril Connect &middot; Anil Jakkula, Founder &middot; All rights reserved.</p>
+    <div style="display:flex;gap:.6rem;">
+      <a href="https://github.com/aniljakkula"           target="_blank" class="soc github"  ><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/anil-jakkula" target="_blank" class="soc linkedin"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/917799086877" target="_blank" class="wa-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Top"><i class="fa fa-arrow-up"></i></button>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+/* ═══════════════════════════════════════════════════════
+   PAGE ROUTER — multi-page navigation with history API
+═══════════════════════════════════════════════════════ */
+const PAGES = ['home','profile','work','services','skills','certifications','testimonials','contact'];
+let currentPage = (function(){
+  var h = location.hash.slice(1);
+  return PAGES.indexOf(h) !== -1 ? h : 'home';
+})();
+var swiperInited = false;
+
+function showPage(id, animate) {
+  var el = document.getElementById('pg-' + id);
+  if (!el) return;
+  el.style.display = 'block';
+  if (animate) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      });
+    });
+  } else {
+    el.style.opacity = '1';
+    el.style.transform = 'translateY(0)';
+  }
+}
+
+function hidePage(id, cb) {
+  var el = document.getElementById('pg-' + id);
+  if (!el) { if (cb) cb(); return; }
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(-10px)';
+  setTimeout(function() {
+    el.style.display = 'none';
+    el.style.opacity = '';
+    el.style.transform = '';
+    if (cb) cb();
+  }, 300);
+}
+
+function setNavActive(id) {
+  document.querySelectorAll('[data-page]').forEach(function(a) {
+    a.classList.toggle('active', a.dataset.page === id);
+  });
+}
+
+function navigateTo(id, push) {
+  if (PAGES.indexOf(id) === -1) id = 'home';
+  if (id === currentPage) { cMob(); return; }
+  /* Close pages popup */
+  var _p = document.getElementById('bnPopup');
+  if (_p) _p.classList.remove('open');
+  var prev = currentPage;
+  currentPage = id;
+  if (push !== false) {
+    history.pushState({page: id}, '', location.pathname + '#' + id);
+  }
+  document.title = 'Sril Connect \u00B7 ' + id.charAt(0).toUpperCase() + id.slice(1) + ' \u00B7 Anil Jakkula';
+  setNavActive(id);
+  hidePage(prev, function() {
+    window.scrollTo({top: 0});
+    showPage(id, true);
+    updateBottomNav(id);
+    if (id === 'testimonials' && !swiperInited) {
+      setTimeout(function() {
+        new Swiper('.swiper', {
+          slidesPerView: 1, spaceBetween: 20,
+          pagination: {el: '.swiper-pagination', clickable: true},
+          autoplay: {delay: 4500, disableOnInteraction: false},
+          breakpoints: {768: {slidesPerView: 2}},
+          loop: true
+        });
+        swiperInited = true;
+      }, 60);
+    }
+    setTimeout(function() { AOS.refreshHard(); }, 360);
+  });
+  cMob();
+}
+
+/* Init: hide all, show current */
+PAGES.forEach(function(id) {
+  var el = document.getElementById('pg-' + id);
+  if (el) {
+    el.style.transition = 'opacity .3s ease, transform .3s ease';
+    el.style.display = 'none';
+  }
+});
+showPage(currentPage, false);
+setNavActive(currentPage);
+history.replaceState({page: currentPage}, '', location.pathname + '#' + currentPage);
+if (currentPage === 'testimonials') {
+  new Swiper('.swiper', {
+    slidesPerView: 1, spaceBetween: 20,
+    pagination: {el: '.swiper-pagination', clickable: true},
+    autoplay: {delay: 4500, disableOnInteraction: false},
+    breakpoints: {768: {slidesPerView: 2}},
+    loop: true
+  });
+  swiperInited = true;
+}
+
+/* Intercept all [data-page] clicks */
+document.querySelectorAll('[data-page]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    navigateTo(a.dataset.page);
+  });
+});
+
+/* Browser back / forward */
+window.addEventListener('popstate', function(e) {
+  var id = (e.state && e.state.page) ? e.state.page : 'home';
+  if (id !== currentPage) navigateTo(id, false);
+});
+
+/* ═══════════════════════════════════════════════════════
+   PARTICLES
+═══════════════════════════════════════════════════════ */
+particlesJS('particles-js',{particles:{number:{value:40,density:{enable:true,value_area:900}},color:{value:["#C9A96E","#3ECFB2","#7A8499"]},shape:{type:"circle"},opacity:{value:.25,random:true,anim:{enable:true,speed:.4,opacity_min:.05}},size:{value:1.8,random:true},line_linked:{enable:true,distance:140,color:"#C9A96E",opacity:.06,width:.8},move:{enable:true,speed:.55,direction:"none",random:true,out_mode:"out"}},interactivity:{events:{onhover:{enable:true,mode:"repulse"},onclick:{enable:true,mode:"push"}},modes:{repulse:{distance:70},push:{particles_nb:2}}},retina_detect:true});
+
+/* ═══════════════════════════════════════════════════════
+   MOUSE GLOW
+═══════════════════════════════════════════════════════ */
+document.addEventListener('mousemove', function(e) {
+  if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
+  var glow = document.getElementById('mglow');
+  if (glow) { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; }
+});
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL
+═══════════════════════════════════════════════════════ */
+window.addEventListener('scroll', function() {
+  var s = document.documentElement.scrollTop;
+  var h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById('prog').style.width = (s / h * 100) + '%';
+  document.getElementById('nav').classList.toggle('scrolled', s > 40);
+  document.getElementById('btt').classList.toggle('vis', s > 300);
+});
+
+/* ═══════════════════════════════════════════════════════
+   TYPING
+═══════════════════════════════════════════════════════ */
+var words = ['Freelance Web Developer','Web App Developer','React Developer','Firebase Expert','UI/UX Enthusiast'];
+var wi = 0, ci2 = 0, del = false;
+function type() {
+  var el = document.getElementById('typed'), w = words[wi];
+  if (!el) return;
+  if (!del) {
+    el.textContent = w.slice(0, ++ci2);
+    if (ci2 === w.length) { del = true; setTimeout(type, 1800); return; }
+  } else {
+    el.textContent = w.slice(0, --ci2);
+    if (ci2 === 0) { del = false; wi = (wi + 1) % words.length; }
+  }
+  setTimeout(type, del ? 55 : 90);
+} type();
+
+/* ═══════════════════════════════════════════════════════
+   AOS
+═══════════════════════════════════════════════════════ */
+AOS.init({duration: 650, once: false, offset: 50, easing: 'ease-out-quart'});
+
+/* ═══════════════════════════════════════════════════════
+   HAMBURGER MENU
+═══════════════════════════════════════════════════════ */
+var hbg = document.getElementById('hbg');
+var mob = document.getElementById('mob');
+var closeMob = document.getElementById('closeMob');
+function oMob() {
+  mob.classList.add('open');
+  document.body.classList.add('mob-open');
+  hbg.classList.add('open');
+  hbg.setAttribute('aria-expanded', 'true');
+}
+function cMob() {
+  mob.classList.remove('open');
+  document.body.classList.remove('mob-open');
+  hbg.classList.remove('open');
+  hbg.setAttribute('aria-expanded', 'false');
+}
+hbg.setAttribute('aria-expanded', 'false');
+hbg.addEventListener('click', oMob);
+closeMob.addEventListener('click', cMob);
+mob.addEventListener('click', function(e) { if (e.target === mob) cMob(); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') cMob(); });
+
+/* ═══════════════════════════════════════════════════════
+   CONTACT FORM → WhatsApp  (7799086877)
+═══════════════════════════════════════════════════════ */
+function sendForm() {
+  var n = document.getElementById('fn').value.trim();
+  var e = document.getElementById('fe').value.trim();
+  var s = document.getElementById('fs').value.trim();
+  var m = document.getElementById('fm').value.trim();
+  if (!n || !e || !m) { alert('Please fill in your name, email, and message.'); return; }
+  var text = 'New website enquiry%0A%0AName: ' + encodeURIComponent(n) +
+             '%0AEmail: '   + encodeURIComponent(e) +
+             '%0ASubject: ' + encodeURIComponent(s || 'Project inquiry') +
+             '%0AMessage: ' + encodeURIComponent(m);
+  window.open('https://wa.me/917799086877?text=' + text, '_blank');
+}
+
+/* ═══════════════════════════════════════════════════════
+   HERO SCROLL PARALLAX
+═══════════════════════════════════════════════════════ */
+window.addEventListener('scroll', function() {
+  var hc = document.querySelector('.hero-content');
+  var pb = document.querySelector('.profile-block');
+  var y  = window.scrollY;
+  if (hc) hc.style.transform = 'translateY(' + (y * .08) + 'px)';
+  if (pb) pb.style.transform  = 'translateY(' + (y * .05) + 'px)';
+});
+
+/* ═══════════════════════════════════════════════════════
+   PRELOADER — IIFE: runs immediately, never blocks on images
+═══════════════════════════════════════════════════════ */
+;(function(){
+  var loader  = document.getElementById('preloader');
+  var fill    = document.getElementById('loaderFill');
+  var percent = document.getElementById('loaderPercent');
+  var value   = 0;
+  var timer   = setInterval(function(){
+    value += Math.floor(Math.random() * 8) + 4;
+    if(value >= 100) value = 100;
+    if(fill)    fill.style.width    = value + '%';
+    if(percent) percent.textContent = value + '%';
+    if(value === 100){
+      clearInterval(timer);
+      setTimeout(function(){ if(loader) loader.classList.add('hide'); }, 350);
+    }
+  }, 95);
+  /* Safety: force-hide after 5 s no matter what */
+  setTimeout(function(){
+    if(loader && !loader.classList.contains('hide')) loader.classList.add('hide');
+  }, 5000);
+})();
+
+/* ═══════════ BOTTOM NAV ═══════════ */
+function updateBottomNav(pageId) {
+  var pagesSet = ['home','profile','work','services','testimonials','certifications'];
+  var bnPagesBtn   = document.getElementById('bnPagesBtn');
+  var bnSkillsBtn  = document.getElementById('bnSkillsBtn');
+  var bnContactBtn = document.getElementById('bnContactBtn');
+  if(bnPagesBtn)   bnPagesBtn.classList.toggle('bn-active',   pagesSet.indexOf(pageId) !== -1);
+  if(bnSkillsBtn)  bnSkillsBtn.classList.toggle('bn-active',  pageId === 'skills');
+  if(bnContactBtn) bnContactBtn.classList.toggle('bn-active', pageId === 'contact');
+  document.querySelectorAll('.bn-plink').forEach(function(l){
+    l.classList.toggle('active', l.dataset.page === pageId);
+  });
+}
+
+(function initBottomNav(){
+  var pagesBtn = document.getElementById('bnPagesBtn');
+  var popup    = document.getElementById('bnPopup');
+  var skillBtn = document.getElementById('bnSkillsBtn');
+  var contBtn  = document.getElementById('bnContactBtn');
+
+  /* Toggle popup */
+  pagesBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    popup.classList.toggle('open');
+    pagesBtn.setAttribute('aria-expanded', popup.classList.contains('open'));
+  });
+
+  /* Close on outside click */
+  document.addEventListener('click', function(e){
+    if(popup && popup.classList.contains('open') &&
+       !popup.contains(e.target) && !pagesBtn.contains(e.target)){
+      popup.classList.remove('open');
+      pagesBtn.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* Close on Escape */
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ popup.classList.remove('open'); pagesBtn.setAttribute('aria-expanded','false'); }
+  });
+
+  /* Page links inside popup */
+  document.querySelectorAll('.bn-plink').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      popup.classList.remove('open');
+      pagesBtn.setAttribute('aria-expanded','false');
+      navigateTo(btn.dataset.page);
+    });
+  });
+
+  /* Middle: Skills */
+  skillBtn.addEventListener('click', function(){ navigateTo('skills'); });
+
+  /* Right: Contact */
+  contBtn.addEventListener('click', function(){ navigateTo('contact'); });
+
+  /* Set initial active state */
+  updateBottomNav(currentPage);
+})();
+
+/* ═══════════ FAQ ACCORDION ═══════════ */
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item    = btn.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+
+/* ═══════════ SERVICE WORKER ═══════════ */
+if('serviceWorker' in navigator){
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('./sw.js')
+      .then(function(reg){
+        console.log('[SrilConnect] SW \u2713 scope:', reg.scope);
+        /* Auto-activate new SW the moment it finishes installing */
+        reg.addEventListener('updatefound', function(){
+          var nw = reg.installing;
+          nw.addEventListener('statechange', function(){
+            if(nw.state === 'installed' && navigator.serviceWorker.controller){
+              nw.postMessage({ type: 'SKIP_WAITING' });
+              console.log('[SrilConnect] New SW ready \u2014 reloading...');
+              window.location.reload();
+            }
+          });
+        });
+      })
+      .catch(function(err){ console.warn('[SrilConnect] SW failed:', err); });
+  });
+}
+</script>
+</body>
+</html>

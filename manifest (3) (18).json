@@ -1,0 +1,62 @@
+{
+  "name": "Sril Connect \u2014 Web Development Agency",
+  "short_name": "Sril Connect",
+  "description": "Sril Connect \u2014 Web Development Agency founded by Anil Jakkula. Modern websites & apps for businesses. 9 HP LIFE Certifications.",
+  "start_url": "/#home",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0C0F1A",
+  "theme_color": "#C9A96E",
+  "orientation": "portrait-primary",
+  "categories": [
+    "business",
+    "productivity"
+  ],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=192&h=192&fit=crop&q=90",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=512&h=512&fit=crop&q=90",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Our Work",
+      "short_name": "Work",
+      "url": "/#work",
+      "description": "Browse recent client projects"
+    },
+    {
+      "name": "Profile",
+      "short_name": "Profile",
+      "url": "/#profile",
+      "description": "About Anil Jakkula \u2014 skills & certifications"
+    },
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "url": "/#services",
+      "description": "What we can build for you"
+    },
+    {
+      "name": "Hire Us",
+      "short_name": "Contact",
+      "url": "/#contact",
+      "description": "Start a project with us"
+    },
+    {
+      "name": "Certs",
+      "short_name": "Certs",
+      "url": "/#certifications",
+      "description": "9 HP LIFE Certifications"
+    }
+  ]
+}
