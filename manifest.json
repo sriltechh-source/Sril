@@ -15,13 +15,13 @@
   "lang": "en",
   "icons": [
     {
-      "src": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=192&h=192&fit=crop&q=90",
+      "src": "https://cdn.jsdelivr.net/gh/sriltechh-source/Sril@main/1782369995035.png?w=192&h=192&fit=crop&q=90",
       "sizes": "192x192",
       "type": "image/jpeg",
       "purpose": "any"
     },
     {
-      "src": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=512&h=512&fit=crop&q=90",
+      "src": "https://cdn.jsdelivr.net/gh/sriltechh-source/Sril@main/1782369995035.png?w=512&h=512&fit=crop&q=90",
       "sizes": "512x512",
       "type": "image/jpeg",
       "purpose": "any maskable"
